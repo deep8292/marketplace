@@ -4,17 +4,15 @@ import images from "../../helpers/images";
 
 function ImageCarousel() {
     return (
-        <Carousel>
-            <div>
+        <Carousel  showIndicators={false} showThumbs={false} autoPlay={true} dynamicHeight={false}>
             {images.map((image, idx) => {
                 return (
                     <div>
                         <img src={image}/>
-                        <p className="legend">Image {idx}</p>
+                        {/* <p className="legend">Image {idx}</p> */}
                     </div>
                 )
             })}
-            </div>
         </Carousel>
 
     );
