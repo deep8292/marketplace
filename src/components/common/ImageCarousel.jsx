@@ -9,7 +9,6 @@ function ImageCarousel() {
                 return (
                     <div>
                         <img src={image}/>
-                        {/* <p className="legend">Image {idx}</p> */}
                     </div>
                 )
             })}
