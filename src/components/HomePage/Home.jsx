@@ -1,12 +1,12 @@
 import HomeHeader from "../common/Header";
 import ImageCarousel from "../common/ImageCarousel";
-import TitleView from "../common/TileView";
+import GridView from "../common/GridView";
 function Home() {
     return (
         <>
             <HomeHeader />
             <ImageCarousel />
-            <TitleView />
+            <GridView />
         </>
     )
 }
