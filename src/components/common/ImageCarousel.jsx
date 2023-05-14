@@ -7,7 +7,7 @@ function ImageCarousel() {
         <Carousel  showIndicators={false} showThumbs={false} autoPlay={true} dynamicHeight={false}>
             {images.map((image, idx) => {
                 return (
-                    <div>
+                    <div key={idx}>
                         <img src={image}/>
                     </div>
                 )
