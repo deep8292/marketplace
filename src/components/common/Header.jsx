@@ -1,13 +1,6 @@
 import '../styles/Header.css';
-import Button from 'react-bootstrap/Button';
-// import Modal from 'react-bootstrap/Modal';
-// import LoginModal from '../Login/LoginModal';
-// import { useState } from 'react';
 
 function HomeHeader(props) {
-
-    // const [modalShow, setModalShow] = useState(false);
-
     return (
         <>
             <div className="header">

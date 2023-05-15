@@ -1,26 +1,31 @@
 import HomeHeader from "../common/Header";
 import ImageCarousel from "../common/ImageCarousel";
 import GridView from "../common/GridView";
-import LoginModal from "../Login/LoginModal";
+import EntryModal from "../Entry/EntryModal";
 import { Modal } from "react-bootstrap";
 import { useState } from "react";
 
-function Home() {
 
+function Home() {
     const [modalShow, setModalShow] = useState(false);
+    const [loginTap, setLoginTap] = useState(true);
 
     const handleLogin = () => {
+        setLoginTap(true);
         setModalShow(true);
     }
 
     const handleRegister = () => {
+        setLoginTap(false);
         setModalShow(true);
     }
 
     return (
         <>
             <HomeHeader handleLogin={handleLogin} handleRegister={handleRegister}/>
-            <LoginModal 
+            <EntryModal
+                title= {loginTap ? 'Login' : 'Register'}
+                isRegister= {loginTap ? false : true}
                 show={modalShow}
                 onHide={() => setModalShow(false)}
             />
