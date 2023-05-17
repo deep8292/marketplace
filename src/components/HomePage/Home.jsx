@@ -1,8 +1,7 @@
 import HomeHeader from "../common/Header";
 import ImageCarousel from "../common/ImageCarousel";
 import GridView from "../common/GridView";
-import EntryModal from "../Entry/EntryModal";
-import { Modal } from "react-bootstrap";
+import EntryModal from "../EntryPage/EntryModal";
 import { useState } from "react";
 
 
