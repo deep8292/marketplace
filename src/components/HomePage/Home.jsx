@@ -3,6 +3,7 @@ import ImageCarousel from "../common/ImageCarousel";
 import GridView from "../common/GridView";
 import EntryModal from "../EntryPage/EntryModal";
 import { useState } from "react";
+import Footer from "../common/Footer";
 
 
 function Home() {
@@ -39,6 +40,7 @@ function Home() {
             />
             <ImageCarousel />
             <GridView />
+            <Footer />
         </>
     )
 }
