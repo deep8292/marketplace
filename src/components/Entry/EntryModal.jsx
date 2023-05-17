@@ -85,7 +85,7 @@ function EntryModal(props) {
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Cancel</Button>
-        <Button onClick={props.onHide}>Submit</Button>
+        <Button onClick={props.onSubmit}>{props.isRegister ? 'Register' : 'Login'}</Button>
       </Modal.Footer>
     </Modal>
   );

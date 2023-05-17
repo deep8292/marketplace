@@ -2,16 +2,16 @@
     box-sizing: border-box;
     width: 100%;
     display: flex;
-    padding-left: 1.5em;
+    padding-left: 0.5em;
     justify-content: space-between;
     background-color: rgb(192, 45, 26);
     color: #fff;
-    padding-right: 1.5em;
+    padding-right: 0.5em;
+    margin: 0;
   }
 
-.button-container {
-  align-items: center;
-  display: flex;
+.text-config {
+  text-align:center;
 }
 
 .button-configuration {

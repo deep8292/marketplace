@@ -8,26 +8,35 @@ import { useState } from "react";
 
 function Home() {
     const [modalShow, setModalShow] = useState(false);
-    const [loginTap, setLoginTap] = useState(true);
+    const [isLogin, setLoggingValue] = useState(true);
 
     const handleLogin = () => {
-        setLoginTap(true);
+        setLoggingValue(true);
         setModalShow(true);
     }
 
     const handleRegister = () => {
-        setLoginTap(false);
+        setLoggingValue(false);
         setModalShow(true);
+    }
+
+    const registerOrSignIn= () => {
+        if (isLogin) {
+            console.log('Perform Login') 
+        } else {
+            console.log('Register User')
+        }
     }
 
     return (
         <>
             <HomeHeader handleLogin={handleLogin} handleRegister={handleRegister}/>
             <EntryModal
-                title= {loginTap ? 'Login' : 'Register'}
-                isRegister= {loginTap ? false : true}
+                title= {isLogin ? 'Login' : 'Register'}
+                isRegister= {isLogin ? false : true}
                 show={modalShow}
                 onHide={() => setModalShow(false)}
+                onSubmit={() => registerOrSignIn()}
             />
             <ImageCarousel />
             <GridView />
