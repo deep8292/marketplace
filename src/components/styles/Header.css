@@ -8,10 +8,15 @@
     color: #fff;
     padding-right: 0.5em;
     margin: 0;
+    align-items: center;
   }
 
 .text-config {
   text-align:center;
+}
+
+.center-text-config{
+  margin: 0;
 }
 
 .button-configuration {

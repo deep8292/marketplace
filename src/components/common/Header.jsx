@@ -5,7 +5,7 @@ function HomeHeader(props) {
         <>
             <div className="header">
                 <div className="text-config">
-                <h1>Marketplace</h1>
+                <h1 className='center-text-config'>Marketplace</h1>
                 </div>
                 <div>
                     <button className='button-configuration' onClick={props.handleLogin}>Login</button>
