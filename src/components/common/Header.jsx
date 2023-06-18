@@ -17,7 +17,7 @@ function HomeHeader(props) {
 
     const userIsLoggedIn = () => {
         return (
-            <p>Hello! User</p>
+            <p className='center-text-config'>Hello! User</p>
     );
     }
 
