@@ -1,33 +1,51 @@
 import '../styles/GridView.css'
 import images from '../../helpers/images';
+import { Link } from 'react-router-dom';
 
-function TitleView() {
+function TitleView({ onClickItem }) {
+
+    const items = [
+        {
+            'image': '../../assets/1.jpg',
+            'name': 'Item 1',
+            'id': 1
+        },
+        {
+            'image': '../../assets/2.jpg',
+            'name': 'Item 2',
+            'id': 2
+        },
+        {
+            'image': '../../assets/3.jpg',
+            'name': 'Item 3',
+            'id': 3
+        },
+        {
+            'image': '../../assets/4.jpg',
+            'name': 'Item 4',
+            'id': 4
+        },
+        {
+            'image': '../../assets/5.jpg',
+            'name': 'Item 5',
+            'id': 5
+        },
+    ]
+
     return (
         <div className="container">
-            <div>
-                <div>
-                    <img className='image' src={images[0]}/>
-                    <div className="text">Item 1</div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <img className='image' src={images[0]}/>
-                    <div className="text">Item 2</div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <img className='image' src={images[0]}/>
-                    <div className="text">Item 3</div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <img className='image' src={images[0]}/>
-                    <div className="text">Item 6</div>
-                </div>
-            </div>
+            {items.map((item) => 
+                (
+                <Link key={item.id} to={`/item/${item.id}`}>
+                    <div onClick={() => onClickItem(item)}>
+                        <div>
+                            <img className='image' src={images[item.id-1]} />
+                            <div className="text">{item.name}</div>
+                        </div>
+                    </div>
+                </Link>
+                )
+            )}
         </div>
     )
 }

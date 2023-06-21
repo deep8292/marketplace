@@ -5,13 +5,14 @@ import EntryModal from "../EntryPage/EntryModal";
 import { useContext, useState } from "react";
 import Footer from "../common/Footer";
 import UserContext from "../../context/userContext";
-
+import { Link } from "react-router-dom";
 
 function Home() {
     const [modalShow, setModalShow] = useState(false);
     const [isLogin, setLoggingValue] = useState(true);
+    const [item, setItem] = useState();
     const {setLoggedIn} = useContext(UserContext);
-
+    
     const handleLogin = () => {
         setLoggingValue(true);
         setModalShow(true);
@@ -32,6 +33,13 @@ function Home() {
         setModalShow(false);
     }
 
+    const onClickItem = (item) => {
+        setItem(item);
+        
+    }
+
+    
+
     return (
         <>
             <HomeHeader handleLogin={handleLogin} handleRegister={handleRegister}/>
@@ -43,7 +51,7 @@ function Home() {
                 onSubmit={() => registerOrSignIn()}
             />
             <ImageCarousel />
-            <GridView />
+            <GridView onClickItem={onClickItem}/>
             <Footer />
         </>
     )

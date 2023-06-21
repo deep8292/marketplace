@@ -4,7 +4,7 @@ import { useContext } from 'react';
 
 function HomeHeader(props) {
 
-    const { loggedIn, setLoggedIn } = useContext(UserContext);
+    const { loggedIn } = useContext(UserContext);
 
     const userIsNotLoggedIn = () => {
         return (
@@ -18,7 +18,7 @@ function HomeHeader(props) {
     const userIsLoggedIn = () => {
         return (
             <p className='center-text-config'>Hello! User</p>
-    );
+        );
     }
 
     return (
