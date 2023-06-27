@@ -36,8 +36,8 @@ function TitleView({ onClickItem }) {
         <div className="container">
             {items.map((item) => 
                 (
-                <Link key={item.id} to={`/item/${item.id}`}>
-                    <div onClick={() => onClickItem(item)}>
+                <Link key={item.id} to={`/item/${item.id}`} state={item}>
+                    <div>
                         <div>
                             <img className='image' src={images[item.id-1]} />
                             <div className="text">{item.name}</div>

@@ -1,11 +1,12 @@
+import { useContext, useState } from "react";
+
 import HomeHeader from "../common/Header";
 import ImageCarousel from "../common/ImageCarousel";
 import GridView from "../common/GridView";
 import EntryModal from "../EntryPage/EntryModal";
-import { useContext, useState } from "react";
 import Footer from "../common/Footer";
+
 import UserContext from "../../context/userContext";
-import { Link } from "react-router-dom";
 
 function Home() {
     const [modalShow, setModalShow] = useState(false);
@@ -33,11 +34,6 @@ function Home() {
         setModalShow(false);
     }
 
-    const onClickItem = (item) => {
-        setItem(item);
-        
-    }
-
     
 
     return (
@@ -51,7 +47,7 @@ function Home() {
                 onSubmit={() => registerOrSignIn()}
             />
             <ImageCarousel />
-            <GridView onClickItem={onClickItem}/>
+            <GridView />
             <Footer />
         </>
     )

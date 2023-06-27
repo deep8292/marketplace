@@ -4,11 +4,11 @@ import { UserProvider } from "./context/userContext";
 function App() {
 
   return (
-    <div>
+    <>
       <UserProvider>
         <RouterProvider router={router}/>
       </UserProvider>
-    </div>
+    </>
   )
 }
 
