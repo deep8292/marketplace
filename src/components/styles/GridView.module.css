@@ -2,8 +2,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     grid-gap: 20px;
-    padding: 1rem;
-    margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 /*.grid-item {
@@ -27,4 +28,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .titleText {
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
   }

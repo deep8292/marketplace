@@ -1,4 +1,4 @@
-import '../styles/GridView.css'
+import classes from '../styles/GridView.module.css'
 import images from '../../helpers/images';
 import { Link } from 'react-router-dom';
 
@@ -33,20 +33,23 @@ function TitleView({ onClickItem }) {
     ]
 
     return (
-        <div className="container">
+        <>
+        <p className={classes.titleText}>Recently Added</p>
+        <div className={classes.container}>
             {items.map((item) => 
                 (
-                <Link key={item.id} to={`/item/${item.id}`} state={item}>
+                <Link key={item.id} style={{textDecoration: 'none'}} to={`/item/${item.id}`} state={item}>
                     <div>
                         <div>
-                            <img className='image' src={images[item.id-1]} />
-                            <div className="text">{item.name}</div>
+                            <img className={classes.image} src={images[item.id-1]} />
+                            <div className={classes.text}>{item.name}</div>
                         </div>
                     </div>
                 </Link>
                 )
             )}
         </div>
+        </>
     )
 }
 
