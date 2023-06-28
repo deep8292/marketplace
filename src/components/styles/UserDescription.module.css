@@ -1,0 +1,17 @@
+.boxContainer {
+    flex: 1;
+    padding: 0.5rem;
+    width: 50%;
+}
+
+.descriptionTitle {
+    text-align: right;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.descriptionDetails{
+    text-align: right;
+    font-size: 16px;
+    font-weight: 300;
+}
