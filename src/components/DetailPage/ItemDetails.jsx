@@ -17,8 +17,6 @@ function ItemDetails() {
         <div className={classes.container}>
             <ItemDescription />
             <UserDetails />
-            {/* <div style={{ width: '50%', height: '200px', backgroundColor: 'red' }}></div>
-            <div style={{ width: '50%', height: '200px', backgroundColor: 'blue' }}></div> */}
         </div>
         <Footer />
         </>

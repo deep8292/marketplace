@@ -1,0 +1,47 @@
+{
+    "data" : {
+        "banner": [
+            {
+                "id": 1,
+                "imageURL": "abc.jpg"
+            },
+            {
+                "id": 2,
+                "imageURL": "abc.jpg"
+            },
+            {
+                "id": 3,
+                "imageURL": "abc.jpg"
+            },
+            {
+                "id": 4,
+                "imageURL": "abc.jpg"
+            }
+        ],
+        "recentAdded": [
+            {
+                "id": 1,
+                "name": "Test",
+                "images": [
+                    {
+                        "id": 1,
+                        "imageURL": "abc.jpg"
+                    },
+                    {
+                        "id": 1,
+                        "imageURL": "abc.jpg"
+                    }
+                ],
+                "description": "Lorem Ipsum",
+                "created_at": "2023-07-01",
+                "seller_info": {
+                    "name": "John Doe",
+                    "Phone": "123-456-789"
+                },
+                "is_active": true,
+                "item_price": 12.20,
+                "currency": "CAD"
+            }
+        ]
+    }
+}

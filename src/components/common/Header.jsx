@@ -1,10 +1,13 @@
 import '../styles/Header.css';
 import UserContext from '../../context/userContext';
+
 import { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 function HomeHeader(props) {
 
     const { loggedIn } = useContext(UserContext);
+    const navigator = useNavigate();
 
     const userIsNotLoggedIn = () => {
         return (
@@ -21,11 +24,15 @@ function HomeHeader(props) {
         );
     }
 
+    const onTitleClick = () => {
+        navigator('/');
+    }
+
     return (
         <>
             <div className="header">
                 <div className="text-config">
-                <h1 className='center-text-config'>Marketplace</h1>
+                <h1 className='center-text-config' onClick={onTitleClick}>Marketplace</h1>
                 </div>
                 { loggedIn ? userIsLoggedIn() : userIsNotLoggedIn() }                
             </div>
