@@ -13,7 +13,7 @@ function Register() {
 
 
   return (
-    <div className={classes.container}>
+    // <div className={classes.container}>
     <form onSubmit={handleSubmit(onSubmit)}>
       
       <div className={classes.inputContainer}>
@@ -36,7 +36,7 @@ function Register() {
       
       <input type="submit" />
     </form>
-    </div>
+    // </div>
   )
 }
 
