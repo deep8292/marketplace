@@ -5,8 +5,11 @@ import ImageCarousel from "../common/ImageCarousel";
 import GridView from "../common/GridView";
 import EntryModal from "../EntryPage/EntryModal";
 import Footer from "../common/Footer";
+import Modal from "../common/Modal";
 
 import UserContext from "../../context/userContext";
+import Register from "../Register/Register";
+// import { Modal } from "react-bootstrap";
 
 function Home() {
     const [modalShow, setModalShow] = useState(false);
@@ -39,13 +42,16 @@ function Home() {
     return (
         <>
             <HomeHeader handleLogin={handleLogin} handleRegister={handleRegister}/>
-            <EntryModal
+            <Modal>
+                <Register />
+            </Modal>
+            {/* <EntryModal
                 title= {isLogin ? 'Login' : 'Register'}
                 isRegister= {isLogin ? false : true}
                 show={modalShow}
                 onHide={() => setModalShow(false)}
                 onSubmit={() => registerOrSignIn()}
-            />
+            /> */}
             <ImageCarousel />
             <GridView />
             <Footer />
