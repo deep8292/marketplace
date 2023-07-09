@@ -8,7 +8,6 @@ function UserDetails () {
             Phone: +1 (777)-999-999<br />
             Email: john@doe.com
             </p>
-            
         </div>
     );
 }
