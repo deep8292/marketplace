@@ -12,7 +12,7 @@ import Register from "../Register/Register";
 // import { Modal } from "react-bootstrap";
 
 function Home() {
-    const [modalShow, setModalShow] = useState(false);
+    const [modalIsVisible, setModalIsVisible] = useState(false);
     const [isLogin, setLoggingValue] = useState(true);
     const [item, setItem] = useState();
     const {setLoggedIn} = useContext(UserContext);
@@ -37,14 +37,22 @@ function Home() {
         setModalShow(false);
     }
 
+    const showModalHandler = () => {
+        setModalIsVisible(true)
+    }
+
+    const hideModalHandler = () => {
+        setModalIsVisible(false)
+    }
     
 
     return (
         <>
-            <HomeHeader handleLogin={handleLogin} handleRegister={handleRegister}/>
-            <Modal>
+            <HomeHeader handleLogin={showModalHandler} handleRegister={showModalHandler}/>
+            {modalIsVisible ? <Modal onClose={hideModalHandler}>
                 <Register />
-            </Modal>
+            </Modal> : null}
+            
             {/* <EntryModal
                 title= {isLogin ? 'Login' : 'Register'}
                 isRegister= {isLogin ? false : true}
