@@ -16,27 +16,46 @@ function Register({ isLoginPressed }) {
   const [isRegisterClicked, setRegisterClicked] = useState(false);
 
   useEffect(() => {
+    console.log('----------USE EFFECT-------');
     if (isLoginPressed && !isRegisterClicked) {
       setLoginClicked(true);
     } else {
       setRegisterClicked(true);
     }
-  })
+  },[]);
 
   const renderHeader = () => {
    return (
     <div className={classes.header}>
-        <button className={isLoginClicked ? classes.headerButton : classes.headerButtonInactive}>Login</button>
-        <button className={isRegisterClicked ? classes.headerButton : classes.headerButtonInactive}>Register</button>
+        <button 
+          className={isLoginClicked ? classes.headerButton : classes.headerButtonInactive}
+          onClick={loginButtonHandler}
+          >
+            Login
+        </button>
+        <button 
+          className={isRegisterClicked ? classes.headerButton : classes.headerButtonInactive}
+          onClick={registerButtonHandler}
+          >
+            Register
+        </button>
     </div>
    );
   }
 
+  const loginButtonHandler = () => {
+    setLoginClicked(true);
+    setRegisterClicked(false);
+  }
 
-  return (
-    <>
-     {renderHeader()}
-    <form onSubmit={handleSubmit(onSubmit)}>
+  const registerButtonHandler = () => {
+    setLoginClicked(false);
+    setRegisterClicked(true);
+  }
+
+  const renderRegisterFields = () => {
+    return (
+      <form onSubmit={handleSubmit(onSubmit)}>
       
       <div className={classes.inputContainer}>
       <label>First Name</label>
@@ -58,6 +77,35 @@ function Register({ isLoginPressed }) {
       
       <button className={classes.buttonStyle}>Submit</button>
     </form>
+    );
+  }
+
+  const renderLoginFields = () => {
+    return (
+      <form onSubmit={handleSubmit(onSubmit)}>
+            
+      <div className={classes.inputContainer}>
+      <label>Email Address</label>
+      <input className={classes.inputStyle} placeholder="abc@email.com" {...register("email", {required: "Invalid email address", pattern: "/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i"})} />
+      <p className={classes.errorStyle}>{errors.email?.message}</p>
+      </div>
+
+      <div className={classes.inputContainer}>
+      <label>Password</label>
+      <input className={classes.inputStyle} placeholder="--------" {...register("password", {required: "This field is required"})} />
+      <p className={classes.errorStyle}>{errors.password?.message}</p>
+      </div>
+      
+      <button className={classes.buttonStyle}>Submit</button>
+    </form>
+    );
+  }
+
+
+  return (
+    <>
+     {renderHeader()}
+     {isLoginClicked ? renderLoginFields() : renderRegisterFields()}
     </>
   )
 }
