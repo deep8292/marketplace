@@ -8,6 +8,7 @@ import Modal from "../common/Modal";
 
 import UserContext from "../../context/userContext";
 import Register from "../Register/Register";
+import BasePage from "../common/BasePage";
 
 function Home() {
     const [modalIsVisible, setModalIsVisible] = useState(false);
@@ -42,6 +43,13 @@ function Home() {
     const hideModalHandler = () => {
         setModalIsVisible(false)
     }
+
+    return(
+        <BasePage>
+            <ImageCarousel />
+            <GridView />
+        </BasePage>
+    );
     
 
     return (
