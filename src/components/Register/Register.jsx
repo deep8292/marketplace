@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form"
 
-import classes from '../styles/Register.module.css';
+import classes from '../Register/Register.module.css';
 import { useEffect, useState } from "react";
 
 function Register({ isLoginPressed }) {
@@ -16,7 +16,7 @@ function Register({ isLoginPressed }) {
   const [isRegisterClicked, setRegisterClicked] = useState(false);
 
   useEffect(() => {
-    console.log('----------USE EFFECT-------');
+    console.log('----------USE EFFECT IN PLACE -------');
     if (isLoginPressed && !isRegisterClicked) {
       setLoginClicked(true);
     } else {
