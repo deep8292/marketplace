@@ -16,7 +16,6 @@ function Register({ isLoginPressed }) {
   const [isRegisterClicked, setRegisterClicked] = useState(false);
 
   useEffect(() => {
-    console.log('----------USE EFFECT IN PLACE -------');
     if (isLoginPressed && !isRegisterClicked) {
       setLoginClicked(true);
     } else {

@@ -1,14 +1,14 @@
-import classes from '../styles/Modal.module.css';
+import classes from "../styles/Modal.module.css";
+import { forwardRef } from "react";
 
-function Modal({ children, onClose }) {
+const Modal = forwardRef((props, ref) => {
   return (
-    <>
-      <div className={classes.backdrop} onClick={onClose} />
-      <dialog open className={classes.modal}>
-        {children}
+    <div className={classes.backdrop} onClick={props.onClose}>
+      <dialog open className={classes.modal} ref={ref}>
+        {props.children}
       </dialog>
-    </>
+    </div>
   );
-}
+});
 
 export default Modal;

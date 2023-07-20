@@ -1,34 +1,51 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import Register from "../Register/Register";
 import Modal from "./Modal";
 import HomeHeader from "./Header";
 import Footer from "./Footer";
 
-function BasePage ({children}) {
+function BasePage({ children }) {
+  const [modalIsVisible, setModalIsVisible] = useState(false);
+  const [isLoginPressed, setLoginPressed] = useState(true);
+  const modalRef = useRef(null);
 
-    const [modalIsVisible, setModalIsVisible] = useState(false);
-    const [isLoginPressed, setLoginPressed] = useState(true);
+  const showModalHandler = (loginSelected) => {
+    setLoginPressed(loginSelected);
+    setModalIsVisible(true);
+  };
 
-    const showModalHandler = (loginSelected) => {
-        setLoginPressed(loginSelected);
-        setModalIsVisible(true)
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setModalIsVisible(false);
+      }
+    };
+
+    if (modalIsVisible) {
+      document.addEventListener("mousedown", handleClickOutside);
     }
 
-    const hideModalHandler = () => {
-        setModalIsVisible(false)
-    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [modalIsVisible]);
 
-    return (
-        <>
-        <HomeHeader handleLogin={() => showModalHandler(true)} handleRegister={() => showModalHandler(false)}/>
-            {modalIsVisible ? <Modal onClose={hideModalHandler}>
-                    <Register isLoginPressed={isLoginPressed} />
-                </Modal> : null}
-            {children}
-        <Footer />
-        </>
-    );
+  return (
+    <div className="container">
+      <HomeHeader
+        handleLogin={() => showModalHandler(true)}
+        handleRegister={() => showModalHandler(false)}
+      />
+      {modalIsVisible && (
+        <Modal ref={modalRef}>
+          <Register isLoginPressed={isLoginPressed} />
+        </Modal>
+      )}
+      {children}
+      <Footer />
+    </div>
+  );
 }
 
 export default BasePage;

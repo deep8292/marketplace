@@ -3,19 +3,19 @@
         "banner": [
             {
                 "id": 1,
-                "imageURL": "abc.jpg"
+                "imageURL": "https://cdn.thecoolist.com/wp-content/uploads/2017/02/Chevy-Camaro-1967-69-vintage-car.jpg"
             },
             {
                 "id": 2,
-                "imageURL": "abc.jpg"
+                "imageURL": "https://images.unsplash.com/photo-1688680457716-833675d7a433?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80"
             },
             {
                 "id": 3,
-                "imageURL": "abc.jpg"
+                "imageURL": "https://cdn.thecoolist.com/wp-content/uploads/2017/02/Chevy-Camaro-1967-69-vintage-car.jpg"
             },
             {
                 "id": 4,
-                "imageURL": "abc.jpg"
+                "imageURL": "https://cdn.thecoolist.com/wp-content/uploads/2017/02/Chevy-Camaro-1967-69-vintage-car.jpg"
             }
         ],
         "recentlyAdded": [

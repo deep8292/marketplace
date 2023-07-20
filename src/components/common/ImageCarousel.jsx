@@ -1,18 +1,19 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 import { Carousel } from 'react-responsive-carousel';
-import images from "../../helpers/images";
+// import images from "../../helpers/images";
 
 import classes from '../styles/Carousel.module.css';
 
-function ImageCarousel() {
+function ImageCarousel({ images }) {
+    // console.log(images);
     return (
         <div className={classes.carouselContainer}>
         <Carousel  showIndicators={false} showThumbs={false} autoPlay={true} dynamicHeight={true}>
-            {images.map((image, idx) => {
+            {images.map(({imageURL, id}) => {
                 return (
-                    <div key={idx}>
-                        <img src={image}/>
+                    <div key={id}>
+                        <img src={imageURL}/>
                     </div>
                 )
             })}
