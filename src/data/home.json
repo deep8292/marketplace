@@ -25,14 +25,14 @@
                 "images": [
                     {
                         "id": 1,
-                        "imageURL": "abc.jpg"
+                        "imageURL": "https://cdn.thecoolist.com/wp-content/uploads/2017/02/Chevy-Camaro-1967-69-vintage-car.jpg"
                     },
                     {
                         "id": 2,
                         "imageURL": "abc.jpg"
                     }
                 ],
-                "description": "Lorem Ipsum",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 "created_at": "2023-07-01",
                 "seller_info": {
                     "name": "John Doe",
@@ -40,7 +40,7 @@
                 },
                 "is_active": true,
                 "item_price": 12.20,
-                "currency": "CAD"
+                "currency": "$"
             },
             {
                 "id": 2,
@@ -48,14 +48,14 @@
                 "images": [
                     {
                         "id": 1,
-                        "imageURL": "abc.jpg"
+                        "imageURL": "https://images.unsplash.com/photo-1688680457716-833675d7a433?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80"
                     },
                     {
                         "id": 2,
                         "imageURL": "abc.jpg"
                     }
                 ],
-                "description": "Lorem Ipsum",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 "created_at": "2023-07-08",
                 "seller_info": {
                     "name": "John Doe",
@@ -63,7 +63,7 @@
                 },
                 "is_active": true,
                 "item_price": 15.50,
-                "currency": "CAD"
+                "currency": "$"
             }
         ]
     }

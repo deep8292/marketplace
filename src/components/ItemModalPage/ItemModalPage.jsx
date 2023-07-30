@@ -1,9 +1,15 @@
+import classes from '../ItemModalPage/ItemModal.module.css';
+
 function ItemModal({ item }) {
     return(
         <>
             <div>
-            <h1>Item Name</h1>
-            <p>Item Description</p>
+                <img className={classes.image}
+                src={item.images[0].imageURL}
+                />
+            <h1>{item.name}</h1>
+            <p>{item.description}</p>
+            <p>{item.currency + item.item_price}</p>
             </div>
         </>
     );

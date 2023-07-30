@@ -11,10 +11,11 @@ import result from '../../data/home.json';
 function Home() {
     const ref = useRef(null);
     const [isItemModalPresent, setItemModalPresent] = useState(false);
+    const [item, setItem] = useState(null);
     const data = result.data;
 
     const onClickItem = (item) => {
-        console.log(item);
+        setItem(item);
         setItemModalPresent(true);
     }
 
@@ -25,7 +26,7 @@ function Home() {
     return(
         <BasePage>
         {isItemModalPresent ? <Modal ref={ref} onClose={hideModalHandler}>
-                <ItemModal />
+                <ItemModal item={item} />
             </Modal> : null}
             <ImageCarousel images={data.banner} />
             <GridView items={data.recentlyAdded} itemInfo={onClickItem}/>
