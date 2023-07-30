@@ -9,14 +9,15 @@ import classes from '../styles/ItemDetails.module.css';
 import UserDetails from "./UserDeatils";
 
 function ItemDetails() {
-    let itemDetails = useLocation();
+    let itemDetails = useLocation().state;
+    console.log(itemDetails);
     return(
         <>
         <HomeHeader />
-        <ImageCarousel />
+        <ImageCarousel images={itemDetails.images}/>
         <div className={classes.container}>
-            <ItemDescription />
-            <UserDetails />
+            <ItemDescription itemInfo={itemDetails}/>
+            <UserDetails  itemInfo={itemDetails}/>
         </div>
         <Footer />
         </>
