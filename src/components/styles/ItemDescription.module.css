@@ -1,15 +1,31 @@
 .boxContainer {
     flex: 1;
     padding: 0.5rem;
-    width: 50%;
+    width: 80%;
+    background-color: whitesmoke;
+    margin-bottom: 1rem;
+}
+
+.itemName {
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .descriptionTitle {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .descriptionDetails{
     font-size: 16px;
     font-weight: 300;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.parentContainer {
+    flex: 1;
+    /* width: 50%; */
+    flex-direction: column;
 }

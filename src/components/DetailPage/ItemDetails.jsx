@@ -14,10 +14,12 @@ function ItemDetails() {
     return(
         <>
         <HomeHeader />
+        <div className={classes.parentContainer}>
         <ImageCarousel images={itemDetails.images}/>
         <div className={classes.container}>
             <ItemDescription itemInfo={itemDetails}/>
             <UserDetails  itemInfo={itemDetails}/>
+        </div>
         </div>
         <Footer />
         </>
