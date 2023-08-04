@@ -13,7 +13,7 @@ function ItemDescription ({itemInfo}) {
                 <p className={classes.descriptionDetails}>
                 {itemInfo.description}
                 </p>
-        </div>
+            </div>
         </div>
     );
 }

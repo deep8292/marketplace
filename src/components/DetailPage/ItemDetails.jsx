@@ -7,6 +7,7 @@ import ItemDescription from "./ItemDescription";
 
 import classes from '../styles/ItemDetails.module.css';
 import UserDetails from "./UserDeatils";
+import PriceInfo from "./PriceInfo";
 
 function ItemDetails() {
     let itemDetails = useLocation().state;
@@ -18,7 +19,7 @@ function ItemDetails() {
         <ImageCarousel images={itemDetails.images}/>
         <div className={classes.container}>
             <ItemDescription itemInfo={itemDetails}/>
-            <UserDetails  itemInfo={itemDetails}/>
+            <PriceInfo itemInfo={itemDetails}/>
         </div>
         </div>
         <Footer />

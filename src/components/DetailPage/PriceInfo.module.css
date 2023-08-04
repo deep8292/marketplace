@@ -1,0 +1,16 @@
+.boxContainer {
+    flex: 1;
+    padding: 0.5rem;
+    width: 80%;
+    background-color: whitesmoke;
+    margin-bottom: 1rem;
+    
+}
+
+.parentContainer {
+    /* display: flex; */
+    width: 50%;
+    flex-direction: column;
+    /* background-color: burlywood; */
+    justify-content: flex-end;
+}

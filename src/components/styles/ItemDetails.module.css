@@ -1,11 +1,15 @@
 .container{
     display: flex;
-    flex: 1;
-    padding: 1rem;    
+    padding: 1rem;   
+    /* background-color: rebeccapurple; */
+    /* justify-content: space-around; */
+    flex-direction: row;
 }
 
 .parentContainer {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 1rem;
+    /* width: 100%; */
+    /* background-color: aqua; */
 }
