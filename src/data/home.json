@@ -40,7 +40,8 @@
                 },
                 "is_active": true,
                 "item_price": 12.20,
-                "currency": "$"
+                "currency": "$",
+                "is_donation": false
             },
             {
                 "id": 2,
@@ -63,7 +64,8 @@
                 },
                 "is_active": true,
                 "item_price": 15.50,
-                "currency": "$"
+                "currency": "$",
+                "is_donation": false
             }
         ]
     }

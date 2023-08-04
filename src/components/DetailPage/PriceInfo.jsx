@@ -9,7 +9,8 @@ function PriceInfo ({itemInfo}) {
     return(
         <div className={classes.parentContainer}>
             <div className={classes.boxContainer}>
-                <p>{currencyFormat(itemInfo.item_price)}</p>
+                <p className={classes.priceStyle}>{currencyFormat(itemInfo.item_price)}</p>
+                <button className={classes.offerButton}>MAKE AN OFFER</button>
             </div>
             <div className={classes.boxContainer}>
                 <UserDetails itemInfo={itemInfo}/>

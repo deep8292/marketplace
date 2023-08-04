@@ -1,5 +1,5 @@
 .boxContainer {
-    flex: 1;
+    /* flex: 1; */
     padding: 0.5rem;
     width: 80%;
     background-color: whitesmoke;
@@ -7,11 +7,9 @@
 }
 
 .parentContainer {
-    /* flex: 1; */
-    /* display: flex; */
-    width: 50%;
+    display: flex;
     flex-direction: column;
-    /* background-color: red; */
+    align-items: flex-start;
 }
 
 .itemName {

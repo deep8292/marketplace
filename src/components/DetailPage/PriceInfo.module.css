@@ -1,16 +1,40 @@
 .boxContainer {
-    flex: 1;
-    padding: 0.5rem;
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    width: 60%;
     background-color: whitesmoke;
-    margin-bottom: 1rem;
-    
+    margin-bottom: 0.5rem;
+    padding: 0.2rem;
+}
+/* Reset margin on all direct children of .boxContainer */
+.boxContainer > * {
+    margin: 0;
+    /* padding: 0.5rem; */
 }
 
-.parentContainer {
-    /* display: flex; */
-    width: 50%;
+.parentContainer {  
+    display: flex;
     flex-direction: column;
-    /* background-color: burlywood; */
-    justify-content: flex-end;
+    align-items: flex-end;
 }
+
+.offerButton {
+    width: 80%;
+    background-color: teal;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Work Sans', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+.priceStyle {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    /* background-color: antiquewhite; */
+    margin: 0.2rem;
+ }
