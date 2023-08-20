@@ -1,30 +1,29 @@
 .header {
     box-sizing: border-box;
     width: 100%;
+    height: 4rem;
     display: flex;
-    padding-left: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     justify-content: space-between;
-    background-color: rgb(192, 45, 26);
+    background-color: white;
     color: #fff;
-    padding-right: 0.5em;
-    margin: 0;
+    /* margin: 0; */
     align-items: center;
   }
-
-.text-config {
-  text-align:center;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: bold;
-}
 
 .center-text-config{
   margin: 0;
   padding: 0.5rem;
+  color: black;
+  /* font-size: 24px; */
+  font-family: 'Lexend Mega', sans-serif;
+  font-weight: 900;
+  
 }
 
-.button-configuration {
-  padding: 4px;
-  background-color: rgb(192, 45, 26);
-  color: #fff;
-  font-family: 'Work Sans', sans-serif;
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-column-gap: 0.5rem;
 }

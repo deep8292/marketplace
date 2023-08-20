@@ -1,0 +1,24 @@
+.retroButton {
+    /* font-size: 24px; */
+    font-family: 'Lexend Mega', sans-serif;
+    font-weight: 700;
+    box-shadow: 6px 6px black;
+    padding: 6px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.retroButton.white {
+    color: black;  
+    background-color: white;
+}
+
+.retroButton.blue {
+    color: black;
+    background-color: #FFA07A
+}
+
+.retroButton.green {
+    color: black;
+    background-color: #BAFCA2;
+}
