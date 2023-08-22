@@ -1,10 +1,12 @@
 .footer {
     /* position: fixed; */
-    background-color: rgba(255, 0, 0, 0.4);
+    background-color: rgb(211, 211, 211, 0.3);
     bottom: 0;
     left: 0;
     right: 0;
     padding: 8px;
     text-align: center;
-    font-family: sans-serif;
+    font-family: 'Lexend Mega', sans-serif;
+    font-weight: 200;
+    color: black;
   }

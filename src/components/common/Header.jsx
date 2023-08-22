@@ -14,7 +14,7 @@ function HomeHeader(props) {
         return (
                 <div className='button-container'>
                     <RetroButton color={RetroButtonType.green} title='Login' onClick={props.handleLogin}/>
-                    <RetroButton color={RetroButtonType.blue} title='Register' onClick={props.handleRegister}/>
+                    {/* <RetroButton color={RetroButtonType.white} title='Register' onClick={props.handleRegister}/> */}
                 </div>
         );
     }

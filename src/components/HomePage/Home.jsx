@@ -7,6 +7,7 @@ import Modal from "../common/Modal";
 import ItemModal from "../ItemModalPage/ItemModalPage";
 
 import result from '../../data/home.json';
+import HomeBanner from "./HomeBanner/HomeBanner";
 
 function Home() {
     const ref = useRef(null);
@@ -28,7 +29,8 @@ function Home() {
         {isItemModalPresent ? <Modal ref={ref} onClose={hideModalHandler}>
                 <ItemModal item={item} />
             </Modal> : null}
-            <ImageCarousel images={data.banner} />
+            <HomeBanner />
+            {/* <ImageCarousel images={data.banner} /> */}
             <GridView items={data.recentlyAdded} itemInfo={onClickItem}/>
             
         </BasePage> 
