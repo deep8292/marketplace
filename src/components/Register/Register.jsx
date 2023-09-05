@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form"
 
 import classes from '../Register/Register.module.css';
 import { useEffect, useState } from "react";
+import RetroButton, { RetroButtonType }  from "../button/RetroButton";
+import CustomButton from "../button/CustomButton";
 
 function Register({ isLoginPressed }) {
   const {
@@ -74,7 +76,7 @@ function Register({ isLoginPressed }) {
       <p className={classes.errorStyle}>{errors.email?.message}</p>
       </div>
       
-      <button className={classes.buttonStyle}>Submit</button>
+      <RetroButton color={RetroButtonType.green} title='Submit'/>
     </form>
     );
   }
@@ -95,7 +97,9 @@ function Register({ isLoginPressed }) {
       <p className={classes.errorStyle}>{errors.password?.message}</p>
       </div>
       
-      <button className={classes.buttonStyle}>Submit</button>
+      {/* <button className={classes.buttonStyle}>Submit</button> */}
+      {/* <RetroButton color={RetroButtonType.green} title='Submit'/> */}
+      <CustomButton>Submit</CustomButton>
     </form>
     );
   }

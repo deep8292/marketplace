@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import BasePage from "../common/BasePage";
+import ImageCarousel from "../common/ImageCarousel";
 import GridView from "../common/GridView";
 import Modal from "../common/Modal";
 import ItemModal from "../ItemModalPage/ItemModalPage";
@@ -31,7 +32,6 @@ function Home() {
             <HomeBanner />
             {/* <ImageCarousel images={data.banner} /> */}
             <GridView items={data.recentlyAdded} itemInfo={onClickItem}/>
-            
         </BasePage> 
     );
 }
