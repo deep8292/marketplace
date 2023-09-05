@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    grid-template-columns: repeat(5, 25%)/*repeat(auto-fit, minmax(10%, 10fr))*/;
     grid-gap: 20px;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -17,17 +17,20 @@
 */
 
 .image {
-    width: 100%;
-    height: 90%;
+    width: 99%;
+    height: 85%;
     object-fit: fill;
   }
 
   .text {
-    color: gray;
+    color: black;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
   }
 
   .titleText {
@@ -37,6 +40,13 @@
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Lexend Mega', sans-serif;
     font-weight: 700;
+  }
+
+  .itemContainer {
+    background-color: #FDCE51;
+    box-shadow: 6px 6px black;
+    border-radius: 8px;
+    overflow: auto;
   }
