@@ -3,7 +3,6 @@ import bannerImage from '../../../assets/delivery.webp';
 import { useState, useRef, useEffect } from 'react';
 import Modal from "../../common/Modal";
 import Register from '../../Register/Register';
-
 import RetroButton, {RetroButtonType} from '../../button/RetroButton';
 
 function HomeBanner () {
@@ -51,8 +50,9 @@ function HomeBanner () {
             <div className={classes.leftContainer}>
                 <label>"Connecting Hearts, Trading Goods, and Changing Lives – Buy, Sell, and Donate with Purpose!"</label>
                 <div className={classes.buttonContainer}>
-                    <RetroButton color={RetroButtonType.green} title='Get Started Today'  
-                    onClick={() => showModalHandler(true)}/>
+                <RetroButton buttonType={RetroButtonType.GREEN} onClick={() => showModalHandler(true)}>
+                    Get Started Today
+                </RetroButton>
                 </div>
             </div> 
             {modalIsVisible && (

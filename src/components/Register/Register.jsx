@@ -2,8 +2,7 @@ import { useForm } from "react-hook-form"
 
 import classes from '../Register/Register.module.css';
 import { useEffect, useState } from "react";
-import RetroButton, { RetroButtonType }  from "../button/RetroButton";
-import CustomButton from "../button/CustomButton";
+import RetroButton, {RetroButtonType}  from "../button/RetroButton";
 
 function Register({ isLoginPressed }) {
   const {
@@ -59,24 +58,26 @@ function Register({ isLoginPressed }) {
       <form onSubmit={handleSubmit(onSubmit)}>
       
       <div className={classes.inputContainer}>
-      <label>First Name</label>
+      <label className={classes.labelStyle}>First Name</label>
       <input className={classes.inputStyle} placeholder="John" {...register("firstName", {required: "This is field is required"})} />
       <p className={classes.errorStyle}>{errors.firstName?.message}</p>
       </div>
 
       <div className={classes.inputContainer}>
-      <label>Last Name</label>
+      <label className={classes.labelStyle}>Last Name</label>
       <input className={classes.inputStyle} placeholder="Doe" {...register("lastName", {required: "This is field is required"})} />
       <p className={classes.errorStyle}>{errors.lastName?.message}</p>
       </div>
       
       <div className={classes.inputContainer}>
-      <label>Email Address</label>
+      <label className={classes.labelStyle}>Email Address</label>
       <input className={classes.inputStyle} placeholder="abc@email.com" {...register("email", {required: "Invalid email address", pattern: "/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i"})} />
       <p className={classes.errorStyle}>{errors.email?.message}</p>
       </div>
       
-      <RetroButton color={RetroButtonType.green} title='Submit'/>
+      <RetroButton type="submit" buttonType={RetroButtonType.BLUE}>
+        Submit
+      </RetroButton>
     </form>
     );
   }
@@ -86,20 +87,20 @@ function Register({ isLoginPressed }) {
       <form onSubmit={handleSubmit(onSubmit)}>
             
       <div className={classes.inputContainer}>
-      <label>Email Address</label>
+      <label className={classes.labelStyle}>Email Address</label>
       <input className={classes.inputStyle} placeholder="abc@email.com" {...register("email", {required: "Invalid email address", pattern: "/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i"})} />
       <p className={classes.errorStyle}>{errors.email?.message}</p>
       </div>
 
       <div className={classes.inputContainer}>
-      <label>Password</label>
+      <label className={classes.labelStyle}>Password</label>
       <input className={classes.inputStyle} placeholder="--------" {...register("password", {required: "This field is required"})} />
       <p className={classes.errorStyle}>{errors.password?.message}</p>
       </div>
       
-      {/* <button className={classes.buttonStyle}>Submit</button> */}
-      {/* <RetroButton color={RetroButtonType.green} title='Submit'/> */}
-      <CustomButton>Submit</CustomButton>
+      <RetroButton type="submit" buttonType={RetroButtonType.BLUE}>
+        Submit
+      </RetroButton>
     </form>
     );
   }

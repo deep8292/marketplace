@@ -1,6 +1,6 @@
 import '../styles/Header.css';
 import UserContext from '../../context/userContext';
-import RetroButton, { RetroButtonType } from '../button/RetroButton';
+import RetroButton, {RetroButtonType} from '../button/RetroButton';
 
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -13,7 +13,9 @@ function HomeHeader(props) {
     const userIsNotLoggedIn = () => {
         return (
                 <div className='button-container'>
-                    <RetroButton color={RetroButtonType.green} title='Login' onClick={props.handleLogin}/>
+                    <RetroButton buttonType={RetroButtonType.GREEN}onClick={props.handleLogin}>
+                    Login
+                    </RetroButton>
                     {/* <RetroButton color={RetroButtonType.white} title='Register' onClick={props.handleRegister}/> */}
                 </div>
         );
