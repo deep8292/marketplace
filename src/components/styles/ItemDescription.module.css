@@ -6,6 +6,10 @@
     margin-bottom: 1rem;
 }
 
+.imageContainer {
+    width: 50%;
+}
+
 .parentContainer {
     display: flex;
     flex-direction: column;
@@ -29,4 +33,5 @@
     font-weight: 300;
     font-family: 'Work Sans', sans-serif;
 }
+
 

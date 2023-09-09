@@ -15,8 +15,12 @@ function ItemDetails() {
     return(
         <>
         <HomeHeader />
+        <div className={classes.imageConatiner}>
+            <ImageCarousel images={itemDetails.images}/>
+            </div>
         <div className={classes.parentContainer}>
-        <ImageCarousel images={itemDetails.images}/>
+            
+        
         <div className={classes.container}>
             <ItemDescription itemInfo={itemDetails}/>
             <PriceInfo itemInfo={itemDetails}/>
