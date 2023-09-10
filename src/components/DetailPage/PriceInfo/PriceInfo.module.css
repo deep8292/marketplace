@@ -1,18 +1,12 @@
 .boxContainer {
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    width: 60%;
-    background-color: whitesmoke;
-    margin-bottom: 0.5rem;
-    padding: 0.2rem;
+    justify-content: space-between;
+    width: 100%;
+    height: 5vh;
+    align-items: center;
 }
 /* Reset margin on all direct children of .boxContainer */
-.boxContainer > * {
-    margin: 0;
-    /* padding: 0.5rem; */
-}
+
 
 .parentContainer {  
     display: flex;
@@ -21,13 +15,12 @@
 }
 
 .offerButton {
-    width: 80%;
     background-color: teal;
     color: white;
     font-size: 18px;
     font-weight: bold;
     font-family: 'Work Sans', sans-serif;
-    margin-bottom: 0.5rem;
+    width: 50%;
 }
 
 .priceStyle {

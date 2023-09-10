@@ -9,7 +9,7 @@ function ImageCarousel({ images }) {
     // console.log(images);
     return (
         <div className={classes.carouselContainer}>
-        <Carousel  showIndicators={false} showThumbs={false} autoPlay={true} dynamicHeight={true}>
+        <Carousel  showIndicators={false} showThumbs={false} autoPlay={true} dynamicHeight={false}>
             {images.map(({imageURL, id}) => {
                 return (
                     <div key={id}>

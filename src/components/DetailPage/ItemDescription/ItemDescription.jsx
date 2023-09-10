@@ -1,14 +1,14 @@
-import classes from '../styles/ItemDescription.module.css';
+import classes from '../ItemDescription/ItemDescription.module.css';
+import PriceInfo from '../PriceInfo/PriceInfo';
 
 function ItemDescription ({itemInfo}) {
     return(
         <div className={classes.parentContainer}>
-            <div className={classes.boxContainer}>
                 <p className={classes.itemName}>{itemInfo.name}</p>
-            </div>
-            <div className={classes.boxContainer}>
+                <PriceInfo itemInfo={itemInfo}/>
+            <div>
                 <p className={classes.descriptionTitle}> 
-                Description
+                Overview
                 </p>
                 <p className={classes.descriptionDetails}>
                 {itemInfo.description}
