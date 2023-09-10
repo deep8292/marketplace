@@ -1,8 +1,5 @@
 .container{
     padding: 1rem;   
-    /* display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-column-gap: 0.5rem; */
 }
 
 .parentContainer {
@@ -14,6 +11,10 @@
     flex-direction: column;
     grid-template-columns: repeat(2, 50%);
     grid-gap: 20px;
-    /* flex: 1; */
-    /* justify-content: space-between; */
+}
+
+@media screen and (max-width: 640px) {
+    .carouselAndDescStyles {
+        display: flex;
+    }
 }

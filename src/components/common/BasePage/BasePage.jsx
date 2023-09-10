@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
-import Register from "../Register/Register";
-import Modal from "./Modal";
+import Register from "../../Register/Register";
+import Modal from "../Modal/Modal";
 import HomeHeader from "./Header";
 import Footer from "./Footer";
 

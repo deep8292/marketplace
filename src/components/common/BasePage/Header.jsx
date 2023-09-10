@@ -1,6 +1,6 @@
-import '../styles/Header.css';
-import UserContext from '../../context/userContext';
-import RetroButton, {RetroButtonType} from '../button/RetroButton';
+import './Header.css';
+import UserContext from '../../../context/userContext';
+import RetroButton, {RetroButtonType} from '../../button/RetroButton';
 
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';

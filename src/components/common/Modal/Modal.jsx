@@ -1,4 +1,4 @@
-import classes from "../styles/Modal.module.css";
+import classes from "./Modal.module.css";
 import { forwardRef } from "react";
 
 const Modal = forwardRef((props, ref) => {

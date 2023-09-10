@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 
-import BasePage from "../common/BasePage";
+import BasePage from "../common/BasePage/BasePage";
 import ImageCarousel from "../common/ImageCarousel";
 
 import ItemDescription from "./ItemDescription/ItemDescription";

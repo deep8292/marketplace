@@ -1,7 +1,7 @@
 import classes from '../HomeBanner/HomeBanner.module.css';
 import bannerImage from '../../../assets/delivery.webp';
 import { useState, useRef, useEffect } from 'react';
-import Modal from "../../common/Modal";
+import Modal from "../../common/Modal/Modal";
 import Register from '../../Register/Register';
 import RetroButton, {RetroButtonType} from '../../button/RetroButton';
 

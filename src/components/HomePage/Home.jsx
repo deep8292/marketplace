@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
-import BasePage from "../common/BasePage";
-import ImageCarousel from "../common/ImageCarousel";
+import BasePage from "../common/BasePage/BasePage";
+
 import GridView from "../common/GridView";
-import Modal from "../common/Modal";
+import Modal from "../common/Modal/Modal";
 import ItemModal from "../ItemModalPage/ItemModalPage";
 
 import result from '../../data/home.json';

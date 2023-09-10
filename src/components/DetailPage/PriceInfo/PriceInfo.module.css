@@ -14,20 +14,11 @@
     align-items: flex-end;
 }
 
-.offerButton {
-    background-color: teal;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Work Sans', sans-serif;
-    width: 50%;
-}
-
 .priceStyle {
     font-size: 24px;
     font-weight: bold;
     font-family: 'Work Sans', sans-serif;
     text-align: center;
-    /* background-color: antiquewhite; */
     margin: 0.2rem;
+    color: black;
  }
