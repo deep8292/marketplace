@@ -2,7 +2,7 @@
 .parentContainer {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     flex: 1;
 }
 
@@ -11,6 +11,7 @@
     font-weight: 900;
     font-family: 'Work Sans', sans-serif;
     color: black;
+    margin: 8px 0px 8px 0px;
 }
 
 .descriptionTitle {
@@ -18,6 +19,7 @@
     font-weight: 900;
     font-family: 'Work Sans', sans-serif;
     color: black;
+    margin: 8px 0px 8px 0px;
 }
 
 .descriptionDetails{
@@ -25,6 +27,15 @@
     font-weight: 400;
     font-family: 'Work Sans', sans-serif;
     color: black;
+    margin: 8px 0px 8px 0px;
 }
 
+.userDetails {
+    text-align: right;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
 

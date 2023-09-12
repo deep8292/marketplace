@@ -1,4 +1,4 @@
-import classes from '../styles/GridView.module.css'
+import classes from './GridView.module.css';
 import images from '../../helpers/images';
 import { Link } from 'react-router-dom';
 
@@ -35,8 +35,7 @@ function TitleView({ items, itemInfo }) {
     const onClickItem = (item) => {
         itemInfo(item)
     }
-//253,206,281
-//255,246,9
+
     return (
         <>
         <p className={classes.titleText}>Recently Added</p>

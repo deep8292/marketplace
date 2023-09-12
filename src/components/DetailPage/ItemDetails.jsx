@@ -16,17 +16,6 @@ function ItemDetails() {
                 <ItemDescription itemInfo={itemDetails}/>
             </div>
         </div>
-        {/* <div className={classes.parentContainer}>
-        <div className={classes.carouselAndDescStyles}>
-            <ImageCarousel images={itemDetails.images}/>
-            <ItemDescription itemInfo={itemDetails}/>
-        </div>    
-        <PriceInfo itemInfo={itemDetails}/>
-        <div className={classes.container}> */}
-            {/* <ItemDescription itemInfo={itemDetails}/> */}
-            
-        {/* </div>
-        </div> */}
         </BasePage>
     );
 }
