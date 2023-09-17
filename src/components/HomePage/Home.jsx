@@ -24,6 +24,8 @@ function Home() {
         setItemModalPresent(false)
     }
 
+    const limitedItems = data.recentlyAdded.slice(0, 8);
+
     return(
         <BasePage>
         {isItemModalPresent ? <Modal ref={ref} onClose={hideModalHandler}>
@@ -31,7 +33,7 @@ function Home() {
             </Modal> : null}
             <HomeBanner />
             {/* <ImageCarousel images={data.banner} /> */}
-            <GridView items={data.recentlyAdded} itemInfo={onClickItem}/>
+            <GridView items={limitedItems} itemInfo={onClickItem}/>
         </BasePage> 
     );
 }
