@@ -9,7 +9,7 @@ function PriceInfo ({itemInfo}) {
 
     return(
         <div className={classes.boxContainer}>
-                <p className={classes.priceStyle}>{currencyFormat(itemInfo.item_price)}</p>
+                <p className={classes.priceStyle}>{itemInfo.item_price}</p>
                 {/* <button className={classes.offerButton}>MAKE AN OFFER</button> */}
                 <RetroButton buttonType={RetroButtonType.BLUE}>Make An Offer</RetroButton>
             </div>

@@ -1,7 +1,8 @@
 .container {
     display: grid;
-    grid-template-columns: repeat(5, 20%)/*repeat(auto-fit, minmax(10%, 10fr))*/;
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 10fr))/*repeat(auto-fit, minmax(10%, 10fr))*/;
+    /* grid-gap: 20px; */
+    grid-gap: 3rem;
     padding-left: 2rem;
     padding-right: 2rem;
     margin-bottom: 2.5rem;
@@ -18,7 +19,7 @@
 
 .image {
     width: 95%;
-    height: 80%;
+    height: 85%;
     object-fit: fill;
     border: 3px solid black;
     display: block;
