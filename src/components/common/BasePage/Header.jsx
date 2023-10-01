@@ -1,6 +1,7 @@
 import './Header.css';
 import UserContext from '../../../context/userContext';
 import RetroButton, {RetroButtonType} from '../../button/RetroButton';
+import SearchBar from '../SearchBar/SearchBar';
 
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -16,7 +17,6 @@ function HomeHeader(props) {
                     <RetroButton buttonType={RetroButtonType.GREEN}onClick={props.handleLogin}>
                     Login
                     </RetroButton>
-                    {/* <RetroButton color={RetroButtonType.white} title='Register' onClick={props.handleRegister}/> */}
                 </div>
         );
     }
@@ -35,8 +35,9 @@ function HomeHeader(props) {
         <>
             <div className="header">
                 <div className="text-config">
-                <h1 className='center-text-config' onClick={onTitleClick}>Marketplace</h1>
+                    <h1 className='center-text-config' onClick={onTitleClick}>Marketplace</h1>
                 </div>
+                <SearchBar />
                 { loggedIn ? userIsLoggedIn() : userIsNotLoggedIn() }                
             </div>
         </>
