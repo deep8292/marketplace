@@ -9,6 +9,7 @@ function BasePage({ children }) {
   const [modalIsVisible, setModalIsVisible] = useState(false);
   const [isLoginPressed, setLoginPressed] = useState(true);
   const modalRef = useRef(null);
+  
 
   const showModalHandler = (loginSelected) => {
     setLoginPressed(loginSelected);
