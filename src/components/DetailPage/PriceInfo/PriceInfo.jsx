@@ -11,7 +11,7 @@ function PriceInfo ({itemInfo}) {
         <div className={classes.boxContainer}>
                 <p className={classes.priceStyle}>{itemInfo.item_price}</p>
                 {/* <button className={classes.offerButton}>MAKE AN OFFER</button> */}
-                <RetroButton buttonType={RetroButtonType.BLUE}>Make An Offer</RetroButton>
+                <RetroButton buttonType={RetroButtonType.BLUE}>Add To Cart</RetroButton>
             </div>
         // <div className={classes.parentContainer}>
             

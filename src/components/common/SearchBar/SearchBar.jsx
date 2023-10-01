@@ -27,7 +27,7 @@ function SearchBar () {
             {filter != "" ? (
                 <div className={classes.searchListStyle}>
                     <ul>
-                    {filteredItems.map((item, index) => (
+                    {filteredItems.slice(0,5).map((item, index) => (
                         <li className={classes.searchResultText} key={index}>{item.name}</li>
                     ))}
                     </ul>
