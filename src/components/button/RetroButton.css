@@ -31,3 +31,7 @@
     color: black;
     background-color: #8cef23;
 }
+
+.retroButton:hover {
+    background-color: #e3dff2
+}
