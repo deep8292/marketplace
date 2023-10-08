@@ -28,7 +28,7 @@ function Home() {
 
     return(
         <BasePage>
-        {isItemModalPresent ? <Modal ref={ref} onClose={hideModalHandler}>
+        {isItemModalPresent ? <Modal ref={ref} onClose={() => setItemModalPresent(false)}>
                 <ItemModal item={item} />
             </Modal> : null}
             <HomeBanner />

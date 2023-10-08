@@ -1,0 +1,12 @@
+
+.searchListStyle {
+    position: absolute;
+    background-color: white;
+    max-height: 500px;
+    border-radius: 8px;
+}
+
+.searchResultText {
+    font-size: 16px;
+    color: black;
+}
