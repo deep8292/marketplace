@@ -30,15 +30,15 @@ function HomeBanner () {
     };
 
     useEffect(() => {
-    const handleClickOutside = (event) => {
-        if (modalRef.current && !modalRef.current.contains(event.target)) {
-            setModalIsVisible(false);
-        }
-    };
+        const handleClickOutside = (event) => {
+            if (modalRef.current && !modalRef.current.contains(event.target)) {
+                setModalIsVisible(false);
+            }
+        };
 
-    if (modalIsVisible) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
+        if (modalIsVisible) {
+        document.addEventListener("mousedown", handleClickOutside);
+        }
 
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);

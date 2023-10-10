@@ -4,6 +4,7 @@
 
 .parentContainer {
     padding: 2rem;
+    flex-direction: row;
 }
 
 .carouselAndDescStyles {

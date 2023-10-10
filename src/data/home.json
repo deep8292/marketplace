@@ -18,80 +18,43 @@
                 "imageURL": "https://cdn.thecoolist.com/wp-content/uploads/2017/02/Chevy-Camaro-1967-69-vintage-car.jpg"
             }
         ],
-        "recentlyAdded1": [
-            {
-                "id": 1,
-                "name": "Test",
-                "images": [
-                    {
-                        "id": 1,
-                        "imageURL": "https://cdn.thecoolist.com/wp-content/uploads/2017/02/Chevy-Camaro-1967-69-vintage-car.jpg"
-                    },
-                    {
-                        "id": 2,
-                        "imageURL": "https://images.unsplash.com/photo-1688680457716-833675d7a433?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80"
-                    }
-                ],
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                "created_at": "2023-07-01",
-                "seller_info": {
-                    "name": "John Doe",
-                    "phone": "123-456-789"
-                },
-                "is_active": true,
-                "item_price": 12.20,
-                "currency": "$"
-            },
-            {
-                "id": 2,
-                "name": "Test 2",
-                "images": [
-                    {
-                        "id": 1,
-                        "imageURL": "https://images.unsplash.com/photo-1688680457716-833675d7a433?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80"
-                    },
-                    {
-                        "id": 2,
-                        "imageURL": "https://cdn.thecoolist.com/wp-content/uploads/2017/02/Chevy-Camaro-1967-69-vintage-car.jpg"
-                    }
-                ],
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                "created_at": "2023-07-08",
-                "seller_info": {
-                    "name": "John Doe",
-                    "phone": "123-456-789"
-                },
-                "is_active": true,
-                "item_price": 15.50,
-                "currency": "$"
-            },
-            {
-                "id": 3,
-                "name": "Donation Item",
-                "images": [
-                    {
-                        "id": 1,
-                        "imageURL": "https://images.unsplash.com/photo-1688680457716-833675d7a433?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80"
-                    },
-                    {
-                        "id": 2,
-                        "imageURL": "https://cdn.thecoolist.com/wp-content/uploads/2017/02/Chevy-Camaro-1967-69-vintage-car.jpg"
-                    }
-                ],
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                "created_at": "2023-07-08",
-                "seller_info": {
-                    "name": "John Doe",
-                    "phone": "123-456-789"
-                },
-                "is_active": true,
-                "item_price": null,
-                "currency": null
-            }
-            
-        ],
         "recentlyAdded": 
-        [{"id":1,"name":"Oil - Canola","images":[{"id":1,"imageURL":"http://dummyimage.com/300x300.png/cc0000/ffffff"},{"id":2,"imageURL":"http://dummyimage.com/300x300.png/ff4444/ffffff"},{"id":3,"imageURL":"http://dummyimage.com/300x300.png/ff4444/ffffff"},{"id":4,"imageURL":"http://dummyimage.com/300x300.png/5fa2dd/ffffff"},{"id":5,"imageURL":"http://dummyimage.com/300x300.png/ff4444/ffffff"}],"description":"urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero","created_at":"2022-11-06","is_active":false,"item_price":"$12.08","currency":"CAD","seller_info":{"name":"Alec Figura","phone":"832-473-5309"}},
+        [
+            {
+                "id":1,
+                "name":"Oil - Canola",
+        "images":[
+            {
+                "id":1,
+                "imageURL":"http://dummyimage.com/300x300.png/cc0000/ffffff"
+            },
+            {
+                "id":2,
+                "imageURL":"http://dummyimage.com/300x300.png/ff4444/ffffff"
+            },
+            {
+                "id":3,
+                "imageURL":"http://dummyimage.com/300x300.png/ff4444/ffffff"
+            },
+            {
+                "id":4,
+                "imageURL":"http://dummyimage.com/300x300.png/5fa2dd/ffffff"
+            },
+            {
+                "id":5,
+                "imageURL":"http://dummyimage.com/300x300.png/ff4444/ffffff"
+            }
+        ],
+        "description":"urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero",
+        "created_at":"2022-11-06",
+        "is_active":false,
+        "item_price":"$12.08",
+        "currency":"CAD",
+        "seller_info":{
+            "name":"Alec Figura",
+            "phone":"832-473-5309"
+            }
+        },
 {"id":2,"name":"Sugar - Splenda Sweetener","images":[{"id":1,"imageURL":"http://dummyimage.com/300x300.png/dddddd/000000"},{"id":2,"imageURL":"http://dummyimage.com/300x300.png/ff4444/ffffff"},{"id":3,"imageURL":"http://dummyimage.com/300x300.png/cc0000/ffffff"},{"id":4,"imageURL":"http://dummyimage.com/300x300.png/ff4444/ffffff"}],"description":"vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse","created_at":"2023-01-22","is_active":null,"item_price":null,"currency":"CAD","seller_info":{"name":"Fraze Baudouin","phone":"421-769-0377"}},
 {"id":3,"name":"Puree - Mango","images":[{"id":1,"imageURL":"http://dummyimage.com/300x300.png/ff4444/ffffff"},{"id":2,"imageURL":"http://dummyimage.com/300x300.png/5fa2dd/ffffff"},{"id":3,"imageURL":"http://dummyimage.com/300x300.png/dddddd/000000"}],"description":"in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in","created_at":"2022-10-27","is_active":null,"item_price":"$102.97","currency":"CAD","seller_info":{"name":"Audrey Ellicott","phone":"402-842-5706"}},
 {"id":4,"name":"Tea - Herbal - 6 Asst","images":[{"id":1,"imageURL":"http://dummyimage.com/300x300.png/5fa2dd/ffffff"},{"id":2,"imageURL":"http://dummyimage.com/300x300.png/5fa2dd/ffffff"}],"description":"vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero","created_at":"2023-02-28","is_active":true,"item_price":null,"currency":"CAD","seller_info":{"name":"Orsola Cordet","phone":"612-648-1716"}},
