@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from 'react-router-dom';
 
 import Register from "../../Register/Register";
 import Modal from "../Modal/Modal";
 import HomeHeader from "./Header";
 import Footer from "./Footer";
+
 
 function BasePage({ children }) {
   const [modalIsVisible, setModalIsVisible] = useState(false);
@@ -15,6 +17,10 @@ function BasePage({ children }) {
     setLoginPressed(loginSelected);
     setModalIsVisible(true);
   };
+
+  const onClickAddItem = () => {
+    
+  }
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -37,6 +43,7 @@ function BasePage({ children }) {
       <HomeHeader
         handleLogin={() => showModalHandler(true)}
         handleRegister={() => showModalHandler(false)}
+        handleAddItem={() => onClickAddItem()}
       />
       {modalIsVisible && (
         <Modal ref={modalRef}>

@@ -18,18 +18,19 @@
 }
 
 .retroButton.white {
-    color: black;  
     background-color: white;
 }
 
 .retroButton.blue {
-    color: black;
     background-color: #69d2e7
 }
 
 .retroButton.green {
-    color: black;
     background-color: #8cef23;
+}
+
+.retroButton.yellow {
+    background-color: #ff6b6b;
 }
 
 .retroButton:hover {

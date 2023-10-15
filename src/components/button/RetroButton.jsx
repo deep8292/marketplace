@@ -5,6 +5,7 @@ export const RetroButtonType = {
   WHITE: 'retroButton white',
   BLUE: 'retroButton blue',
   GREEN: 'retroButton green',
+  YELLOW: 'retroButton yellow'
 };
 
  function RetroButton({ children, type = 'button', buttonType, ...attributes }) {

@@ -2,6 +2,7 @@ import './Header.css';
 import { useState, useEffect } from 'react';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import UserContext from '../../../context/userContext';
 import RetroButton, {RetroButtonType} from '../../button/RetroButton';
@@ -37,7 +38,14 @@ function HomeHeader(props) {
 
     const userIsLoggedIn = () => {
         return (
-            <p className='center-text-config'>Hello! User</p>
+            <div className='button-container'>
+                <p className='center-text-config'>Hello! User</p>
+                <Link to={`addProduct`} >
+                    <RetroButton buttonType={RetroButtonType.YELLOW}onClick={props.handleAddItem}>
+                        Add Item
+                    </RetroButton>
+                </Link>
+            </div>
         );
     }
 
