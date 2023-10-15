@@ -1,0 +1,14 @@
+.roundedDropdown {
+    display: inline-block;
+  }
+  
+  .roundedSelect {
+    color: black;
+    border-radius: 16px; /* Add rounded corners */
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    /* margin-right: 20px; */
+  }
+  
