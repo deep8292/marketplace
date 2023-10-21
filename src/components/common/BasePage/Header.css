@@ -16,14 +16,43 @@
   margin: 0;
   padding: 0.5rem;
   color: black;
-  /* font-size: 24px; */
   font-family: 'Lexend Mega', sans-serif;
   font-weight: 900;
-  
 }
 
-.button-container {
+@media screen and (max-width: 640px) {
+  .header {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0px;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fffff1;
+    color: #ffff;
+    align-items: center;
+  }
+  .center-text-config{
+    margin: 0;
+    color: black;
+    font-family: 'Lexend Mega', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    text-align: right;
+  }
+  .button-container {
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* .button-container {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-column-gap: 0.5rem;
+} */
+
+.button-container {
+  display: flex;
+  flex-direction: row;
 }

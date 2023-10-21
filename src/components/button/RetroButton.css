@@ -7,10 +7,17 @@
     min-width: 100px;
     border: none;
     min-height: 35px;
-    /* width: 80%; */
     font-size: 16px;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+@media screen and (max-width: 640px) {
+    .retroButton {
+        font-family: 'Lexend Mega', sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+    }
 }
 
 .retroButton[type="submit"] {

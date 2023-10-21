@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form"
 import Dropdown from "../common/DropDown/DropDown";
 import CurrencyInput from "../common/CurrencyInput/CurrencyInput";
 import CheckboxWithText from "../common/CheckBox/Checkbox";
+import { useState } from "react";
 
 function AddProduct () {
 
@@ -14,6 +15,8 @@ function AddProduct () {
         formState: { errors },
         handleSubmit,
     } = useForm();
+
+    const [isDonation, setIsDonation] = useState(false);
 
       const onSubmit = (data) => {
         console.log('Submitted data:', data);
@@ -40,18 +43,30 @@ function AddProduct () {
                 <label className={classes.labelStyle}>Description</label>
                 <div className={classes.priceInputContainer}>
                     <div className={classes.Dropdown}> 
-                        <Dropdown />
+                        <Dropdown isDisabled={isDonation} />
                     </div>
                     
                     <div className={classes.innerInputContainer}>
-                        <CurrencyInput />
+                        <CurrencyInput isDisabled={isDonation}/>
                     </div>                    
                 </div>
             </div>
             <div className={classes.checkBoxContainer}>
-                <CheckboxWithText />
+                <CheckboxWithText updateCheckbox={setIsDonation}/>
             </div>
-            
+
+            <div className={classes.imageUploadContainer}>
+                <div className={classes.imagePlaceholder}>
+                    <p>+</p>
+                </div>
+                <div className={classes.imagePlaceholder}>
+                    <p>+</p>
+                </div>
+                <div className={classes.imagePlaceholder}>
+                    <p>+</p>
+                </div>
+            </div>
+
             <RetroButton type="submit" buttonType={RetroButtonType.BLUE}>
               Submit
             </RetroButton>

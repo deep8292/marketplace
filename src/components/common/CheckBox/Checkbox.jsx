@@ -6,10 +6,11 @@ function Checkbox(props) {
 
     const handleCheckboxChange = () => {
         setIsChecked(!isChecked);
+        props.updateCheckbox(!isChecked);
       };
 
       return (
-        <div className="checkbox-container">
+        <div>
           <label className="custom-checkbox">
             <input
               type="checkbox"

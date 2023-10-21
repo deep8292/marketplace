@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classes from './DropDown.module.css';
 
-function Dropdown() {
+function Dropdown({isDisabled}) {
   const [selectedOption, setSelectedOption] = useState('CAD'); // Initial selected option
 
   const options = ['CAD', 'USD'];
@@ -11,10 +11,10 @@ function Dropdown() {
   };
 
   return (
-    <div className={classes.roundedDropdown}>
-      <select className={classes.roundedSelect} value={selectedOption} onChange={handleSelectChange}>
+    <div  className={classes.roundedDropdown}>
+      <select  className={classes.roundedSelect} value={selectedOption} onChange={handleSelectChange}>
         {options.map((name, key) => 
-            <option  key={key} value={key}>{name}</option>
+            <option disabled={isDisabled} key={key} value={key}>{name}</option>
         )}
       </select>
     </div>

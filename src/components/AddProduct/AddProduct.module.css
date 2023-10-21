@@ -11,14 +11,16 @@
 
 .inputContainer {
     display: flex;
-    width: 100%;
+    /* width: 100%; */
+    flex: 1;
     flex-direction: column;
     font-family: 'Work Sans', sans-serif;
 }
 
 .innerInputContainer {
+    /* padding-left: 16px; */
     display: flex;
-    width: 100%;
+    flex: 1;
     flex-direction: column;
     font-family: 'Work Sans', sans-serif;
 }
@@ -50,14 +52,12 @@
     width: 100%;
 }
 
-
-
 .priceInputContainer {
     display: flex;
     flex-direction: row;
     /* justify-content: space-between; */
     font-family: 'Work Sans', sans-serif;
-    height: 80px;
+    height: 60px;
 }
 
 .priceInputContainer > .dropdown {
@@ -66,10 +66,7 @@
 
 .priceInputContainer > .innerInputContainer {
     flex: 1; 
-    padding-left: 16px;
-    justify-content: space-between;
 }
-  
 
 .errorStyle{
     font-family: 'Work Sans', sans-serif;
@@ -83,5 +80,57 @@
 }
 
 .checkBoxContainer {
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
+}
+
+.imageUploadContainer {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagePlaceholder {
+    width: 13rem; 
+    height: 13rem; 
+    background-color: rgba(211, 211, 211, 0.3);
+    border: 2px solid gray;
+    border-radius: 10px; 
+    padding: 1rem; 
+    color: black; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family:  'Lexend Mega', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 640px) {
+    .formStyle {
+        width: 90%;
+    }
+    .imageUploadContainer {
+        padding: 0.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .imagePlaceholder {
+        width: 5rem; 
+        height: 5rem; 
+        background-color: rgba(211, 211, 211, 0.3);
+        border: 2px solid gray;
+        border-radius: 10px; 
+        padding: 1rem; 
+        color: black; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family:  'Lexend Mega', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+    }
 }

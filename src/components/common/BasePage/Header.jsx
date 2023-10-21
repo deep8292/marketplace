@@ -13,6 +13,7 @@ function HomeHeader(props) {
     const navigator = useNavigate();
     const { loggedIn } = useContext(UserContext);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
+    // const [showAddItem, setShowAddItem] = useState(true);
 
     useEffect(() => {
         const handleResize = () => {
@@ -40,11 +41,11 @@ function HomeHeader(props) {
         return (
             <div className='button-container'>
                 <p className='center-text-config'>Hello! User</p>
-                <Link to={`addProduct`} >
+                {props.showAddItem ? <Link to={`addProduct`} >
                     <RetroButton buttonType={RetroButtonType.YELLOW}onClick={props.handleAddItem}>
                         Add Item
                     </RetroButton>
-                </Link>
+                </Link>: null}
             </div>
         );
     }

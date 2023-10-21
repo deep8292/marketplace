@@ -44,6 +44,7 @@ function BasePage({ children }) {
         handleLogin={() => showModalHandler(true)}
         handleRegister={() => showModalHandler(false)}
         handleAddItem={() => onClickAddItem()}
+        showAddItem={true}
       />
       {modalIsVisible && (
         <Modal ref={modalRef}>
