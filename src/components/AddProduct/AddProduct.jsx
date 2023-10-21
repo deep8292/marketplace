@@ -5,6 +5,7 @@ import RetroButton, {RetroButtonType} from "../button/RetroButton";
 import { useForm } from "react-hook-form"
 import Dropdown from "../common/DropDown/DropDown";
 import CurrencyInput from "../common/CurrencyInput/CurrencyInput";
+import CheckboxWithText from "../common/CheckBox/Checkbox";
 
 function AddProduct () {
 
@@ -38,22 +39,18 @@ function AddProduct () {
             <div className={classes.inputContainer}>
                 <label className={classes.labelStyle}>Description</label>
                 <div className={classes.priceInputContainer}>
-                    <div className={classes.Dropdown}> {/* Assign a class or id to the Dropdown */}
+                    <div className={classes.Dropdown}> 
                         <Dropdown />
                     </div>
-                    <div className={classes.inputContainer}>
-                        {/* <input type="number" min="0.10" className={classes.inputStyle} placeholder="5.99" {...register("itemPrice", {required: "This field is required"})} /> */}
-                        {/* <p className={classes.errorStyle}>{errors.password?.message}</p> */}
+                    
+                    <div className={classes.innerInputContainer}>
                         <CurrencyInput />
-                    </div>
+                    </div>                    
                 </div>
             </div>
-
-            {/* <div className={classes.inputContainer}>
-            <label className={classes.labelStyle}>Price</label>
-            <input className={classes.inputStyle} placeholder="--------" {...register("itemDesc", {required: "This field is required"})} />
-            <p className={classes.errorStyle}>{errors.password?.message}</p>
-            </div> */}
+            <div className={classes.checkBoxContainer}>
+                <CheckboxWithText />
+            </div>
             
             <RetroButton type="submit" buttonType={RetroButtonType.BLUE}>
               Submit
