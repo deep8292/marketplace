@@ -20,7 +20,7 @@ function HomeHeader(props) {
             setIsMobile(window.innerWidth <= 640);
           };
           window.addEventListener('resize', handleResize);
-      
+      ``
           // Cleaning up the event listener when the component unmounts
           return () => {
             window.removeEventListener('resize', handleResize);
@@ -41,7 +41,7 @@ function HomeHeader(props) {
         return (
             <div className='button-container'>
                 <p className='center-text-config'>Hello! User</p>
-                {props.showAddItem ? <Link to={`addProduct`} >
+                {props.showAddItem ? <Link to={`/addProduct`} >
                     <RetroButton buttonType={RetroButtonType.YELLOW}onClick={props.handleAddItem}>
                         Add Item
                     </RetroButton>

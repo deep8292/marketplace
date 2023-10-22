@@ -15,6 +15,34 @@ function Register({ isLoginPressed }) {
 
   const [isLoginClicked, setLoginClicked] = useState(false);
   const [isRegisterClicked, setRegisterClicked] = useState(false);
+  const [phoneNumber, setPhoneNumber] = useState()
+
+  const normalizeInput = (value, previousValue) => {
+    if (!value) return value;
+    const currentValue = value.replace(/[^\d]/g, '');
+    const cvLength = currentValue.length;
+    
+    if (!previousValue || value.length > previousValue.length) {
+      if (cvLength < 4) return currentValue;
+      if (cvLength < 7) return `(${currentValue.slice(0, 3)}) ${currentValue.slice(3)}`;
+      const numb = `(${currentValue.slice(0, 3)}) ${currentValue.slice(3, 6)}-${currentValue.slice(6, 10)}`;
+      setPhoneNumber(numb);
+    }
+  };
+  
+  const validateInput = value => {
+    let error = ""
+    
+    if (!value) error = "Required!"
+    else if (value.length !== 14) error = "Invalid phone format. ex: (555) 555-5555";
+    
+    return error;
+  };
+
+  const handleChange = (event) => {
+    console.log('handleChange function called');
+    console.log(event.target.value);
+  }
 
   useEffect(() => {
     if (isLoginPressed && !isRegisterClicked) {
@@ -73,6 +101,19 @@ function Register({ isLoginPressed }) {
       <label className={classes.labelStyle}>Email Address</label>
       <input className={classes.inputStyle} placeholder="abc@email.com" {...register("email", {required: "Invalid email address", pattern: "/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i"})} />
       <p className={classes.errorStyle}>{errors.email?.message}</p>
+      </div>
+
+      <div className={classes.inputContainer}>
+      <label className={classes.labelStyle}>Phone Number</label>
+      <input 
+      className={classes.inputStyle} 
+      placeholder="(xxx) xxx-xxxx" 
+      value={phoneNumber}
+      {...register("phone", {required: 'This field is required',
+        onChange: (e) => normalizeInput(e.target.value)
+      })}
+      />
+      <p className={classes.errorStyle}>{errors.phone?.message}</p>
       </div>
       
       <RetroButton type="submit" buttonType={RetroButtonType.BLUE}>
