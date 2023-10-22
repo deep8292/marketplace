@@ -23,7 +23,7 @@ function AddProduct () {
       };
 
     return (
-        <BasePage>
+        <BasePage showRightButton={false}>
         <div className={classes.container}>
             <form className={classes.formStyle} onSubmit={handleSubmit(onSubmit)}>
             

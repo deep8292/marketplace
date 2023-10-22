@@ -7,7 +7,7 @@ import HomeHeader from "./Header";
 import Footer from "./Footer";
 
 
-function BasePage({ children }) {
+function BasePage({ children, showRightButton = true }) {
   const [modalIsVisible, setModalIsVisible] = useState(false);
   const [isLoginPressed, setLoginPressed] = useState(true);
   const modalRef = useRef(null);
@@ -44,7 +44,7 @@ function BasePage({ children }) {
         handleLogin={() => showModalHandler(true)}
         handleRegister={() => showModalHandler(false)}
         handleAddItem={() => onClickAddItem()}
-        showAddItem={true}
+        showAddItem={showRightButton}
       />
       {modalIsVisible && (
         <Modal ref={modalRef}>

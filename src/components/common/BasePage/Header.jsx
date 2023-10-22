@@ -62,7 +62,7 @@ function HomeHeader(props) {
                 <div className="text-config">
                     <h1 className='center-text-config' onClick={onTitleClick}>Marketplace</h1>
                 </div>
-                {isMobile ? null : <SearchComponent />}
+                {(isMobile || !props.showAddItem) ? null : <SearchComponent />}
                 { loggedIn ? userIsLoggedIn() : userIsNotLoggedIn() }                
             </div>
         </>
