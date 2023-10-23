@@ -60,7 +60,7 @@ function HomeHeader(props) {
         <>
             <div className="header">
                 <div className="text-config">
-                    <h1 className='center-text-config' onClick={onTitleClick}>Marketplace</h1>
+                    <h1 className='header-text-config' onClick={onTitleClick}>Marketplace</h1>
                 </div>
                 {(isMobile || !props.showAddItem) ? null : <SearchComponent />}
                 { loggedIn ? userIsLoggedIn() : userIsNotLoggedIn() }                

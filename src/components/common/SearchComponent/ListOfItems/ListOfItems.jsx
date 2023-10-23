@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import classes from './ListOfItems.module.css';
+import { Link } from 'react-router-dom';
 
 function ListOfItems({ items, filter }) {
 
@@ -11,9 +11,13 @@ function ListOfItems({ items, filter }) {
         console.log('Handle on click');
     }  
 
-    useEffect( () => {
-
-    },[]) 
+    const renderListItem = (value) => {
+        return (
+            <div>
+                <label className={classes.textStyle}>{value}</label>
+            </div>
+        )
+    }
 
     return(
         <div>
@@ -25,7 +29,9 @@ function ListOfItems({ items, filter }) {
                         className={classes.searchResultText} 
                         key={index} 
                         onClick={() => handleOnClickItem(item)}>
-                        {item.name}
+                        <Link key={item.id} to={`/item/${item.id}`} state={item} style={{ textDecoration: 'none'}}>
+                            <p className={classes.labelStyle}>{item.name}</p>
+                        </Link>
                     </li>
                 ))}
                 </ul>

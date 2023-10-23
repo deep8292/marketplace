@@ -20,6 +20,15 @@
   font-weight: 900;
 }
 
+.header-text-config {
+  margin: 0;
+  padding: 0.5rem;
+  color: black;
+  font-family: 'Lexend Mega', sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 640px) {
   .header {
     box-sizing: border-box;
