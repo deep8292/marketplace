@@ -27,6 +27,16 @@
     border-radius: 8px;
   }
 
+.imageUploadStyle{
+    width: 55%;
+    height: 55%;
+    border: 3px solid black;
+    display: block;
+    /* margin: auto; */
+    border-radius: 8px;
+    object-fit: cover;
+}
+
   .text {
     color: black;
     text-align: center;

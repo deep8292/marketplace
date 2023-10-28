@@ -1,12 +1,15 @@
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form"
+
 import BasePage from "../common/BasePage/BasePage";
 import classes from './AddProduct.module.css';
-import RetroButton, {RetroButtonType} from "../button/RetroButton";
-
-import { useForm } from "react-hook-form"
+import gridClass from '../common/GridView.module.css';
 import Dropdown from "../common/DropDown/DropDown";
 import CurrencyInput from "../common/CurrencyInput/CurrencyInput";
 import CheckboxWithText from "../common/CheckBox/Checkbox";
-import { useState } from "react";
+import RetroButton, {RetroButtonType} from "../button/RetroButton";
+import ImageUploader from 'react-images-uploading';
+
 
 function AddProduct () {
 
@@ -17,14 +20,33 @@ function AddProduct () {
     } = useForm();
 
     const [isDonation, setIsDonation] = useState(false);
+    const [images, setImages] = useState([]);
+    const [imageURLs, setImageURLs] = useState([]);
 
       const onSubmit = (data) => {
         console.log('Submitted data:', data);
       };
 
+      const didTapOnFirstImage = (imageList, addUpdateIndex) => {
+        console.log(imageList, addUpdateIndex);
+      }
+
+      const onImageChange = (e) => {
+        console.log('Image change');
+        setImages([...e.target.files]);
+      }
+
+      useEffect(() => {
+        if (images.length < 1) return;
+        const newImageURLs = [];
+        images.forEach(image => newImageURLs.push(URL.createObjectURL(image)));
+        setImageURLs(newImageURLs);
+      },[images]);
+    
+
     return (
         <BasePage showRightButton={false}>
-        <div className={classes.container}>
+        <div className={classes.parentContainer}>
             <form className={classes.formStyle} onSubmit={handleSubmit(onSubmit)}>
             
             <div className={classes.inputContainer}>
@@ -55,17 +77,46 @@ function AddProduct () {
                 <CheckboxWithText updateCheckbox={setIsDonation}/>
             </div>
 
-            <div className={classes.imageUploadContainer}>
-                <div className={classes.imagePlaceholder}>
-                    <p>+</p>
-                </div>
-                <div className={classes.imagePlaceholder}>
-                    <p>+</p>
-                </div>
-                <div className={classes.imagePlaceholder}>
-                    <p>+</p>
-                </div>
+            <div className={classes.inputContainer}>
+                <label className={classes.labelStyle}>Select up to three pictures</label>
+                <input 
+                    className={classes.inputFileStyles}
+                    type="file" multiple accept="image/*" 
+                    onChange={onImageChange} 
+                />
+            {/* {imageURLs.map(imgSrc => <img src={imgSrc} />)} */}
             </div>
+
+            <div className={gridClass.container}>
+            {imageURLs.map((imgSrc, index) => 
+                (
+                    <div className={gridClass.itemContainer} key={index} onClick={() => onClickItem(item)}>
+                        <img className={gridClass.image} src={imgSrc} />
+                    </div>
+                )
+            )}
+        </div>
+
+            {/* <div className={classes.imageUploadContainer}>
+                <div className={classes.imagePlaceholder}>
+                    <p>+</p>
+                </div>
+                <div className={classes.imagePlaceholder}>
+                    <p>+</p>
+                </div>
+                <div className={classes.imagePlaceholder}>
+                    <p>+</p>
+                </div>
+            </div> */}
+
+            {/* <ImageUploader
+                withIcon={true}
+                buttonText='Choose images'
+                onChange={didTapOnFirstImage}
+                imgExtension={['.jpg', '.gif', '.png', '.gif']}
+                maxFileSize={5242880}
+            /> */}
+            
 
             <RetroButton type="submit" buttonType={RetroButtonType.BLUE}>
               Submit
