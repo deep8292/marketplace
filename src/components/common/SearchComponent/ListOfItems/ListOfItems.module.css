@@ -12,6 +12,7 @@
     flex-direction: column;
     margin-top: 0.5rem;
     list-style: none;
+    z-index: 1;
 }
 
 .searchResultText {

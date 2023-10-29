@@ -2,6 +2,7 @@ import classes from '../ItemModalPage/ItemModal.module.css';
 import { Link } from 'react-router-dom';
 
 function ItemModal({ item }) {
+    console.log();
     return(
         <>
             <div>
@@ -11,7 +12,7 @@ function ItemModal({ item }) {
             <h1 className={classes.titleText}>{item.name}</h1>
             <p className={classes.descriptionDetails}>{item.description}</p>
             <div className={classes.row}>
-                <p className={classes.priceDetails}>{item.currency + item.item_price}</p>
+                <p className={classes.priceDetails}>{`${item.currency} ${item.price}`}</p>
                 <Link key={item.id} to={`/item/${item.id}`} state={item}>
                     <p className={classes.priceDetails}>Learn More</p>
                 </Link>

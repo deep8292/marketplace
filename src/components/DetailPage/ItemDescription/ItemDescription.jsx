@@ -4,11 +4,11 @@ import PriceInfo from '../PriceInfo/PriceInfo';
 
 
 function ItemDescription ({itemInfo}) {
-
+    
     return(
         <div className={classes.parentContainer}>
                 <p className={classes.userDetails}> Posted By - {itemInfo.seller_info.name}</p>
-                <p className={classes.itemName}>{itemInfo.name}</p>
+                <p className={classes.itemName}>{itemInfo.title}</p>
                 <PriceInfo itemInfo={itemInfo}/>
             <div>
                 <p className={classes.descriptionTitle}> 

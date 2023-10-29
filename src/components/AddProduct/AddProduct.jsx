@@ -33,7 +33,7 @@ function AddProduct () {
 
       const onImageChange = (e) => {
         console.log('Image change');
-        setImages([...e.target.files]);
+        setImages([...e.target.files, ...images]);
       }
 
       useEffect(() => {
@@ -84,14 +84,13 @@ function AddProduct () {
                     type="file" multiple accept="image/*" 
                     onChange={onImageChange} 
                 />
-            {/* {imageURLs.map(imgSrc => <img src={imgSrc} />)} */}
             </div>
 
             <div className={gridClass.container}>
             {imageURLs.map((imgSrc, index) => 
                 (
-                    <div className={gridClass.itemContainer} key={index} onClick={() => onClickItem(item)}>
-                        <img className={gridClass.image} src={imgSrc} />
+                    <div className={gridClass.itemContainerUploadStyle} key={index} onClick={() => onClickItem(item)}>
+                        <img className={gridClass.imageUploadStyle} src={imgSrc} />
                     </div>
                 )
             )}

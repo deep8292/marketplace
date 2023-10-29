@@ -43,7 +43,7 @@ function HomeHeader(props) {
                 <p className='center-text-config'>Hello! User</p>
                 {props.showAddItem ? <Link to={`/addProduct`} >
                     <RetroButton buttonType={RetroButtonType.YELLOW}onClick={props.handleAddItem}>
-                        Add Item
+                        List an Item
                     </RetroButton>
                 </Link>: null}
             </div>

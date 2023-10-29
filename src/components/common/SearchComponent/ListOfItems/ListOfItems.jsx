@@ -2,22 +2,15 @@ import classes from './ListOfItems.module.css';
 import { Link } from 'react-router-dom';
 
 function ListOfItems({ items, filter }) {
-
+    
     const filteredItems = items.filter((item) =>
-      item.name.toLowerCase().includes(filter.toLowerCase())
+      item.title.toLowerCase().includes(filter.toLowerCase())
     );
 
     const handleOnClickItem = () => {
         console.log('Handle on click');
+        
     }  
-
-    const renderListItem = (value) => {
-        return (
-            <div>
-                <label className={classes.textStyle}>{value}</label>
-            </div>
-        )
-    }
 
     return(
         <div>
@@ -30,7 +23,7 @@ function ListOfItems({ items, filter }) {
                         key={index} 
                         onClick={() => handleOnClickItem(item)}>
                         <Link key={item.id} to={`/item/${item.id}`} state={item} style={{ textDecoration: 'none'}}>
-                            <p className={classes.labelStyle}>{item.name}</p>
+                            <p className={classes.labelStyle}>{item.title}</p>
                         </Link>
                     </li>
                 ))}
