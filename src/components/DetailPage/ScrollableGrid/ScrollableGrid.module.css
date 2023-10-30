@@ -2,16 +2,16 @@
   flex-direction: row;
 }
 .gridContainer {
-    display: flex;
+    display: grid;
     /* grid-template-columns: repeat(auto-fit, minmax(20%, 20fr)); */
-    /* grid-template-columns: repeat(6, 1fr); */
+    grid-template-columns: repeat(4, 1fr);
     /* grid-gap: 20px; */
     grid-gap: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 2rem;
-    /* margin-bottom: 2.5rem; */
     overflow-x: auto;
+    white-space: nowrap;
     /* max-height: minmax(15%, 10fr); */
 }
 
@@ -70,6 +70,8 @@
       padding-left: 2rem;
       padding-right: 2rem;
       margin-bottom: 1.5rem;
+      overflow-x: auto;
+      white-space: nowrap;
     } 
 
     .text {

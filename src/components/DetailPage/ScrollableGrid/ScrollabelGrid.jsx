@@ -15,7 +15,7 @@ function ScrollableGrid({ items, itemInfo }) {
                 (
                     <div className={classes.gridItem} key={item.id} onClick={() => onClickItem(item)}>
                         <img className={classes.image} src={item.images[0].imageURL} />
-                        <div className={classes.text}>{item.name}</div>
+                        <div className={classes.text}>{item.title}</div>
                     </div>
                 )
             )}

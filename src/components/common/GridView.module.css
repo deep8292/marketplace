@@ -1,11 +1,52 @@
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20%, 10fr))/*repeat(auto-fit, minmax(10%, 10fr))*/;
-    /* grid-gap: 20px; */
-    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr))/*repeat(auto-fit, minmax(10%, 10fr))*/;
+    grid-gap: 2vw;
     padding-left: 2rem;
     padding-right: 2rem;
     margin-bottom: 2.5rem;
+}
+
+.itemContainer {
+  background-color: #FDCE51;
+  box-shadow: 6px 6px black;
+  border-radius: 8px;
+  overflow: hidden;
+  /* width: 100%; */
+  max-height: 50vh;
+}
+
+.text {
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+  font-size: 1vw;
+}
+
+.titleText {
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-family: 'Lexend Mega', sans-serif;
+  font-weight: 700;
+  overflow-y: hidden;
+}
+
+.image {
+  width: 95%;
+  height: 90%;
+  object-fit: fill;
+  border: 3px solid black;
+  display: block;
+  /* margin: auto; */
+  border-radius: 8px;
 }
 
 /*.grid-item {
@@ -17,46 +58,13 @@
   }
 */
 
-.image {
-    width: 95%;
-    height: 85%;
-    object-fit: fill;
-    border: 3px solid black;
-    display: block;
-    /* margin: auto; */
-    border-radius: 8px;
-  }
 
-  .text {
-    color: black;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Maven Pro', sans-serif;
-    font-weight: 700;
-    font-size: 1vw;
-  }
 
-  .titleText {
-    color: black;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    font-family: 'Lexend Mega', sans-serif;
-    font-weight: 700;
-  }
+  
 
-  .itemContainer {
-    background-color: #FDCE51;
-    box-shadow: 6px 6px black;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 20vw;
-    height: 40vh;
-  }
+  
+
+  
 
   .imageUploadStyle{
     width: 97%;
@@ -80,7 +88,7 @@
   @media screen and (max-width: 640px) {
     .container {
       display: grid;
-      grid-template-columns: repeat(2, 50%)/*repeat(auto-fit, minmax(10%, 10fr))*/;
+      grid-template-columns: repeat(2, 50%);
       grid-gap: 10px;
       padding-left: 2rem;
       padding-right: 2rem;
@@ -92,8 +100,7 @@
       box-shadow: 6px 6px black;
       border-radius: 8px;
       overflow: hidden;
-      width: 42vw;
-      height: 35vh;
+
     }
 
     .text {
@@ -110,6 +117,43 @@
     .image {
       width: 95%;
       height: 75%;
+      object-fit: fill;
+      border: 3px solid black;
+      display: block;
+      border-radius: 8px;
+    } 
+  }
+
+  @media screen and (min-width: 641px) and (max-width: 1024px) {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 33%);
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    } 
+
+    .itemContainer {
+      background-color: #FDCE51;
+      box-shadow: 6px 6px black;
+      border-radius: 8px;
+      overflow: hidden;
+      max-height: 40vh;
+    }
+
+    .text {
+      color: black;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .image {
+      width: 95%;
+      height: 85%;
       object-fit: fill;
       border: 3px solid black;
       display: block;

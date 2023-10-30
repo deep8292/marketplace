@@ -11,7 +11,7 @@ import result from '../../data/home.json';
 
 function ItemDetails() {
     let itemDetails = useLocation().state;
-    const limitedItems = result.data.recentlyAdded.slice(0, 6);
+    const limitedItems = result.data.recentlyAdded.slice(0, 4);
 
     const onClickItem = (item) => {
         console.log(item);
