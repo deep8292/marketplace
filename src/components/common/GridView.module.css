@@ -100,7 +100,7 @@
       box-shadow: 6px 6px black;
       border-radius: 8px;
       overflow: hidden;
-
+      max-height: 35vh;
     }
 
     .text {
@@ -137,7 +137,7 @@
       box-shadow: 6px 6px black;
       border-radius: 8px;
       overflow: hidden;
-      max-height: 40vh;
+      max-height: 35vh;
     }
 
     .text {

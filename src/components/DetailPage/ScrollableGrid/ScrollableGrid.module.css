@@ -5,7 +5,6 @@
     display: grid;
     /* grid-template-columns: repeat(auto-fit, minmax(20%, 20fr)); */
     grid-template-columns: repeat(4, 1fr);
-    /* grid-gap: 20px; */
     grid-gap: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -47,6 +46,7 @@
     font-family: 'Maven Pro', sans-serif;
     font-weight: 700;
     font-size: 20px;
+    white-space: pre-wrap;
   }
 
   .titleText {
@@ -63,9 +63,9 @@
 
 
   @media screen and (max-width: 640px) {
-    .grid-container {
+    .gridContainer {
       display: grid;
-      grid-template-columns: repeat(2, 50%)/*repeat(auto-fit, minmax(10%, 10fr))*/;
+      grid-template-columns: repeat(2, 50%);
       grid-gap: 10px;
       padding-left: 2rem;
       padding-right: 2rem;
@@ -78,16 +78,60 @@
       color: black;
       text-align: center;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      /* justify-content: center; */
+      /* align-items: center; */
       font-family: 'Maven Pro', sans-serif;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 12px;
+      white-space: pre-wrap;
     }
 
     .image {
       width: 95%;
       height: 75%;
+      object-fit: fill;
+      border: 3px solid black;
+      display: block;
+      border-radius: 8px;
+    }
+    
+  }
+
+  @media screen and (min-width: 641px) and (max-width: 1024px) {
+    .gridContainer {
+      display: grid;
+      grid-template-columns: repeat(3, 33%);
+      grid-gap: 10px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      margin-bottom: 1.5rem;
+      overflow-x: auto;
+      white-space: nowrap;
+    } 
+
+    .gridItem {
+      background-color: #FDCE51;
+      box-shadow: 6px 6px black;
+      border-radius: 8px;
+      overflow: hidden;
+      max-height: 30vh;
+    }
+
+    .text {
+      color: black;
+      text-align: center;
+      display: flex;
+      /* justify-content: center; */
+      /* align-items: center; */
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      white-space: pre-wrap;
+    }
+
+    .image {
+      width: 95%;
+      height: 85%;
       object-fit: fill;
       border: 3px solid black;
       display: block;
