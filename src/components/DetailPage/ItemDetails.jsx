@@ -18,7 +18,7 @@ function ItemDetails() {
     }
 
     return(
-        <BasePage>ˇ
+        <BasePage>
         <div className={classes.parentContainer}>
             <div className={classes.carouselAndDescStyles}>
                 <ImageCarousel images={itemDetails.images}/>

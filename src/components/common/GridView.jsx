@@ -1,6 +1,4 @@
 import classes from './GridView.module.css';
-import images from '../../helpers/images';
-import { Link } from 'react-router-dom';
 
 function TitleView({ items, itemInfo }) {
     const onClickItem = (item) => {

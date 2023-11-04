@@ -5,11 +5,13 @@ import Register from "../../Register/Register";
 import Modal from "../Modal/Modal";
 import HomeHeader from "./Header";
 import Footer from "./Footer";
+import PopupMenu from "../PopupMenu/PopupMenu";
 
 
 function BasePage({ children, showRightButton = true }) {
   const [modalIsVisible, setModalIsVisible] = useState(false);
   const [isLoginPressed, setLoginPressed] = useState(true);
+  const [popUpMenu, setPopUpMenu] = useState(false);
   const modalRef = useRef(null);
   
 
@@ -19,7 +21,7 @@ function BasePage({ children, showRightButton = true }) {
   };
 
   const onClickAddItem = () => {
-    
+    setPopUpMenu(!popUpMenu);
   }
 
   useEffect(() => {
@@ -51,6 +53,7 @@ function BasePage({ children, showRightButton = true }) {
           <Register isLoginPressed={isLoginPressed} />
         </Modal>
       )}
+      {/* {popUpMenu && PopupMenu()} */}
       {children}
       <Footer />
     </div>

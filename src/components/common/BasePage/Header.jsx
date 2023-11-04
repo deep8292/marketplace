@@ -11,7 +11,8 @@ import SearchComponent from '../SearchComponent/SearchComponent';
 function HomeHeader(props) {
 
     const navigator = useNavigate();
-    const { loggedIn } = useContext(UserContext);
+    const { loggedIn, cartCount } = useContext(UserContext);
+    
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
     // const [showAddItem, setShowAddItem] = useState(true);
 
@@ -40,10 +41,19 @@ function HomeHeader(props) {
     const userIsLoggedIn = () => {
         return (
             <div className='button-container'>
-                <p className='center-text-config'>Hello! User</p>
+                {/* <p className='center-text-config'>Hello! User</p> */}
+                {/* {props.showAddItem ? <RetroButton buttonType={RetroButtonType.YELLOW}onClick={props.handleAddItem}>
+                        List an Item
+                    </RetroButton>
+                : null} */}
                 {props.showAddItem ? <Link to={`/addProduct`} >
                     <RetroButton buttonType={RetroButtonType.YELLOW}onClick={props.handleAddItem}>
-                        List an Item
+                        List Item
+                    </RetroButton>
+                </Link>: null}
+                {props.showAddItem ? <Link to={`/addProduct`} >
+                    <RetroButton buttonType={RetroButtonType.GREEN}onClick={props.handleAddItem}>
+                        Cart({cartCount})
                     </RetroButton>
                 </Link>: null}
             </div>

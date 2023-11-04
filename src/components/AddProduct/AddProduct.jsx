@@ -86,7 +86,7 @@ function AddProduct () {
                 />
             </div>
 
-            <div className={gridClass.container}>
+            <div className={gridClass.containerUploadStyle}>
             {imageURLs.map((imgSrc, index) => 
                 (
                     <div className={gridClass.itemContainerUploadStyle} key={index} onClick={() => onClickItem(item)}>
