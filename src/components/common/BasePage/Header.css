@@ -27,6 +27,7 @@
   font-family: 'Lexend Mega', sans-serif;
   font-weight: 900;
   cursor: pointer;
+  font-size: 1.9vw;
 }
 
 @media screen and (max-width: 640px) {
@@ -52,6 +53,15 @@
   .button-container {
     padding-top: 0.5rem;
     padding-right: 0.5rem;
+  }
+  .header-text-config {
+    margin: 0;
+    padding: 0.5rem;
+    color: black;
+    font-family: 'Lexend Mega', sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 5vw;
   }
 }
 

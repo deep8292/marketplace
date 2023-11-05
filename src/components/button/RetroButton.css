@@ -2,12 +2,12 @@
     font-family: 'Lexend Mega', sans-serif;
     font-weight: 700;
     box-shadow: 6px 6px black;
-    padding: 6px;
+    padding: 4px;
     text-align: center;
     min-width: 100px;
     border: none;
     min-height: 35px;
-    font-size: 16px;
+    font-size: 1vw;
     padding-left: 1rem;
     padding-right: 1rem;
 }
@@ -16,7 +16,15 @@
     .retroButton {
         font-family: 'Lexend Mega', sans-serif;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 2.8vw;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    .retroButton {
+        font-family: 'Lexend Mega', sans-serif;
+        font-weight: 700;
+        font-size: 1.5vw;
     }
 }
 

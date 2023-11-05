@@ -27,7 +27,7 @@ function PriceInfo ({itemInfo}) {
 
     return(
         <div className={classes.boxContainer}>
-                <p className={classes.priceStyle}>{itemInfo.item_price}</p>
+                <p className={classes.priceStyle}>${itemInfo.price}</p>
                 <RetroButton 
                     buttonType={RetroButtonType.BLUE}
                     onClick={onClickAddToCart}

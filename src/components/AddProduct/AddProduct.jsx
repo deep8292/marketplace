@@ -8,8 +8,6 @@ import Dropdown from "../common/DropDown/DropDown";
 import CurrencyInput from "../common/CurrencyInput/CurrencyInput";
 import CheckboxWithText from "../common/CheckBox/Checkbox";
 import RetroButton, {RetroButtonType} from "../button/RetroButton";
-import ImageUploader from 'react-images-uploading';
-
 
 function AddProduct () {
 
@@ -23,25 +21,24 @@ function AddProduct () {
     const [images, setImages] = useState([]);
     const [imageURLs, setImageURLs] = useState([]);
 
-      const onSubmit = (data) => {
+    const onSubmit = (data) => {
         console.log('Submitted data:', data);
-      };
+    };
 
-      const didTapOnFirstImage = (imageList, addUpdateIndex) => {
-        console.log(imageList, addUpdateIndex);
-      }
-
-      const onImageChange = (e) => {
-        console.log('Image change');
+    const onImageChange = (e) => {
         setImages([...e.target.files, ...images]);
-      }
+    }
 
-      useEffect(() => {
+    const onClickImage = (index) => {
+        console.log('click image');
+    }
+
+    useEffect(() => {
         if (images.length < 1) return;
         const newImageURLs = [];
         images.forEach(image => newImageURLs.push(URL.createObjectURL(image)));
         setImageURLs(newImageURLs);
-      },[images]);
+    },[images]);
     
 
     return (
@@ -62,7 +59,7 @@ function AddProduct () {
             </div>
 
             <div className={classes.inputContainer}>
-                <label className={classes.labelStyle}>Description</label>
+                <label className={classes.labelStyle}>Price Info</label>
                 <div className={classes.priceInputContainer}>
                     <div className={classes.Dropdown}> 
                         <Dropdown isDisabled={isDonation} />
@@ -89,33 +86,12 @@ function AddProduct () {
             <div className={gridClass.containerUploadStyle}>
             {imageURLs.map((imgSrc, index) => 
                 (
-                    <div className={gridClass.itemContainerUploadStyle} key={index} onClick={() => onClickItem(item)}>
+                    <div className={gridClass.itemContainerUploadStyle} key={index} onClick={() => onClickImage(index)}>
                         <img className={gridClass.imageUploadStyle} src={imgSrc} />
                     </div>
                 )
             )}
         </div>
-
-            {/* <div className={classes.imageUploadContainer}>
-                <div className={classes.imagePlaceholder}>
-                    <p>+</p>
-                </div>
-                <div className={classes.imagePlaceholder}>
-                    <p>+</p>
-                </div>
-                <div className={classes.imagePlaceholder}>
-                    <p>+</p>
-                </div>
-            </div> */}
-
-            {/* <ImageUploader
-                withIcon={true}
-                buttonText='Choose images'
-                onChange={didTapOnFirstImage}
-                imgExtension={['.jpg', '.gif', '.png', '.gif']}
-                maxFileSize={5242880}
-            /> */}
-            
 
             <RetroButton type="submit" buttonType={RetroButtonType.BLUE}>
               Submit

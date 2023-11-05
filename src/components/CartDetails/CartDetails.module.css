@@ -1,0 +1,70 @@
+.headerTextContainer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.headerTextConfig {
+    margin: 0;
+    color: black;
+    font-family: 'Lexend Mega', sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+  }
+
+  .titleConfig {
+    font-size: 1.2vw;
+    font-weight: 900;
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+  }
+
+  .descConfig {
+    font-size: 1vw;
+    font-weight: 300;
+    font-family: 'Work Sans', sans-serif;
+    color: gray;
+  }
+
+  .listItemStyle {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .headerStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  .imgaeContainer {
+    width: 150px;
+    height: 150px;
+    background-color: #FDCE51;
+    box-shadow: 6px 6px black;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 2rem;
+    /* padding-right: 2rem; */
+  }
+
+  .imageStyles {
+    width: 95%;
+    height: 95%;
+  }
+
+  .imageAndTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 2rem;
+  }

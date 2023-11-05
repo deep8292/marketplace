@@ -51,7 +51,7 @@ function HomeHeader(props) {
                         List Item
                     </RetroButton>
                 </Link>: null}
-                {props.showAddItem ? <Link to={`/addProduct`} >
+                {props.showAddItem ? <Link to={`/cart`} >
                     <RetroButton buttonType={RetroButtonType.GREEN}onClick={props.handleAddItem}>
                         Cart({cartCount})
                     </RetroButton>
