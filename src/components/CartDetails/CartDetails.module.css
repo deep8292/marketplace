@@ -26,6 +26,13 @@
     color: gray;
   }
 
+  .priceConfig {
+    font-size: 1vw;
+    font-weight: 400;
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+  }
+
   .listItemStyle {
     margin: 2rem;
     display: flex;
@@ -53,7 +60,6 @@
     border-radius: 8px;
     overflow: hidden;
     margin-right: 2rem;
-    /* padding-right: 2rem; */
   }
 
   .imageStyles {
@@ -67,4 +73,32 @@
     align-items: center;
     width: 80%;
     padding-bottom: 2rem;
+  }
+
+  .cartSummary {
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem;
+  }
+
+  .sectionLeft {
+    width: 50%;
+  }
+
+  .sectionRight {
+    width: 50%;
+  }
+
+  .orderSummary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+  }
+
+  .checkoutContainer {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }

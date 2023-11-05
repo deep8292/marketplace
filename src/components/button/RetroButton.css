@@ -4,13 +4,15 @@
     box-shadow: 6px 6px black;
     padding: 4px;
     text-align: center;
-    min-width: 100px;
+    /* min-width: 50px; */
     border: none;
     min-height: 35px;
     font-size: 1vw;
     padding-left: 1rem;
     padding-right: 1rem;
+    color: black;
 }
+
 
 @media screen and (max-width: 640px) {
     .retroButton {
