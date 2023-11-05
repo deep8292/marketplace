@@ -4,12 +4,6 @@ import RetroButton, { RetroButtonType } from '../button/RetroButton';
 
 function OrderPlaced ({ goToHome }) {
 
-    const lottieOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: animationData, 
-      };
-
       const onClickReturn = () => {
         goToHome()
       }
