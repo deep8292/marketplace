@@ -1,7 +1,7 @@
 import classes from './OrderPlaced.module.css';
 
-import Lottie from 'react-lottie';
-import animationData from '../../helpers/animation_order_placed.json';
+import Lottie from "lottie-react";
+import animationData from '../../helpers/animation_check_mark.json';
 import RetroButton, { RetroButtonType } from '../button/RetroButton';
 
 function OrderPlaced ({ goToHome }) {
@@ -21,7 +21,7 @@ function OrderPlaced ({ goToHome }) {
             <div className={classes.container}>
                 <p className={classes.titleConfig}>Thank you for placing the order</p>
                 <p className={classes.subTitleConfig}>You will recieve the confirmation and details on your email</p>
-                <Lottie options={lottieOptions} height={300} width={300} />
+                <Lottie animationData={animationData} loop={true} height={50} width={50} />
                 <RetroButton 
                     buttonType={RetroButtonType.YELLOW}
                     onClick={onClickReturn}
