@@ -1,0 +1,21 @@
+.container {
+    /* display: flex; */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.titleConfig {
+    font-size: 1.5vw;
+    font-weight: 900;
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+  }
+
+  .subTitleConfig {
+    font-size: 1.2vw;
+    font-weight: 500;
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+  }

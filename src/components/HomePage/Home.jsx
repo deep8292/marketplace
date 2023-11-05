@@ -16,12 +16,13 @@ function Home() {
     const data = result.data;
 
     const onClickItem = (item) => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth', // This adds smooth scrolling animation
+          });
         setItem(item);
         setItemModalPresent(true);
-    }
-
-    const hideModalHandler = () => {
-        setItemModalPresent(false)
+        
     }
 
     const limitedItems = data.recentlyAdded.slice(0, 8);

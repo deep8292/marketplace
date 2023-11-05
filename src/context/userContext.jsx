@@ -17,6 +17,11 @@ export const UserProvider = ({children}) => {
         setCartCount((prevCount) => prevCount - 1);
     };
 
+    const emptyCart = () => {
+        setCartItems([]);
+        setCartCount(0);
+    }
+
 
     return (
         <UserContext.Provider value={{
@@ -26,6 +31,7 @@ export const UserProvider = ({children}) => {
                 cartItems,
                 addToCart,
                 removeFromCart,
+                emptyCart
             }}>
             {children}
         </UserContext.Provider>
