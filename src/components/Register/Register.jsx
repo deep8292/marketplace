@@ -4,14 +4,17 @@ import classes from '../Register/Register.module.css';
 import { useEffect, useState } from "react";
 import RetroButton, {RetroButtonType}  from "../button/RetroButton";
 
-function Register({ isLoginPressed }) {
+function Register({ isLoginPressed, didPressSubmit }) {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm()
 
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = (data) =>{
+     console.log(data);
+     didPressSubmit();
+  }
 
   const [isLoginClicked, setLoginClicked] = useState(false);
   const [isRegisterClicked, setRegisterClicked] = useState(false);
@@ -29,7 +32,7 @@ function Register({ isLoginPressed }) {
       setPhoneNumber(numb);
     }
   };
-  
+  /*
   const validateInput = value => {
     let error = ""
     
@@ -43,6 +46,7 @@ function Register({ isLoginPressed }) {
     console.log('handleChange function called');
     console.log(event.target.value);
   }
+  */
 
   useEffect(() => {
     if (isLoginPressed && !isRegisterClicked) {

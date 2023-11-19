@@ -1,13 +1,15 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { Link } from 'react-router-dom';
 
 import Register from "../../Register/Register";
 import Modal from "../Modal/Modal";
 import HomeHeader from "./Header";
 import Footer from "./Footer";
+import UserContext from "../../../context/userContext";
 
 
 function BasePage({ children, showRightButton = true }) {
+  const { updateUserLoggedIn } = useContext(UserContext);
   const [modalIsVisible, setModalIsVisible] = useState(false);
   const [isLoginPressed, setLoginPressed] = useState(true);
   const modalRef = useRef(null);
@@ -18,6 +20,10 @@ function BasePage({ children, showRightButton = true }) {
     setModalIsVisible(true);
   };
 
+  const hideModalAfterLogin = () => {
+    updateUserLoggedIn();
+    setModalIsVisible(false);
+  }
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -45,7 +51,7 @@ function BasePage({ children, showRightButton = true }) {
       />
       {modalIsVisible && (
         <Modal ref={modalRef}>
-          <Register isLoginPressed={isLoginPressed} />
+          <Register isLoginPressed={isLoginPressed} didPressSubmit={hideModalAfterLogin} />
         </Modal>
       )}
       {children}

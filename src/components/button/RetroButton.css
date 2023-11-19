@@ -4,7 +4,7 @@
     box-shadow: 6px 6px black;
     padding: 4px;
     text-align: center;
-    /* min-width: 50px; */
+    min-width: 100px;
     border: none;
     min-height: 35px;
     font-size: 1vw;

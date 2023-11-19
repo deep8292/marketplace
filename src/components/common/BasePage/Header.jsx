@@ -14,7 +14,6 @@ function HomeHeader(props) {
     const { loggedIn, cartCount } = useContext(UserContext);
     
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
-    // const [showAddItem, setShowAddItem] = useState(true);
 
     useEffect(() => {
         const handleResize = () => {

@@ -1,12 +1,13 @@
 import classes from '../HomeBanner/HomeBanner.module.css';
 import bannerImage from '../../../assets/delivery.webp';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useContext } from 'react';
 import Modal from "../../common/Modal/Modal";
 import Register from '../../Register/Register';
 import RetroButton, {RetroButtonType} from '../../button/RetroButton';
+import UserContext from '../../../context/userContext';
 
 function HomeBanner () {
-
+    const { updateUserLoggedIn } = useContext(UserContext);
     const [modalIsVisible, setModalIsVisible] = useState(false);
     const [isLoginPressed, setLoginPressed] = useState(true);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
@@ -29,15 +30,19 @@ function HomeBanner () {
         setModalIsVisible(true);
     };
 
+    const updateAfterLogin = () => {
+        updateUserLoggedIn();
+        setModalIsVisible(false);
+    }
+
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (modalRef.current && !modalRef.current.contains(event.target)) {
                 setModalIsVisible(false);
             }
         };
-
         if (modalIsVisible) {
-        document.addEventListener("mousedown", handleClickOutside);
+            document.addEventListener("mousedown", handleClickOutside);
         }
 
         return () => {
@@ -57,7 +62,7 @@ function HomeBanner () {
             </div> 
             {modalIsVisible && (
         <Modal ref={modalRef}>
-          <Register isLoginPressed={isLoginPressed} />
+          <Register isLoginPressed={isLoginPressed} didPressSubmit={updateAfterLogin}/>
         </Modal>
       )}
             { isMobile ? null : <div className={classes.rightContainer}>

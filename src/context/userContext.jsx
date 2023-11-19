@@ -3,9 +3,14 @@ import { createContext, useContext, useState } from 'react';
 const UserContext = createContext();
 
 export const UserProvider = ({children}) => {
-    const [loggedIn, setLoggedIn] = useState(true);
+    const [loggedIn, setLoggedIn] = useState(false);
     const [cartCount, setCartCount] = useState(0);
     const [cartItems, setCartItems] = useState([]);
+
+    const updateUserLoggedIn = () => {
+        console.log('I am here');
+        setLoggedIn(true);
+    }
 
     const addToCart = (item) => {
         setCartItems((prevCart) => [...prevCart, item]);
@@ -31,7 +36,8 @@ export const UserProvider = ({children}) => {
                 cartItems,
                 addToCart,
                 removeFromCart,
-                emptyCart
+                emptyCart,
+                updateUserLoggedIn
             }}>
             {children}
         </UserContext.Provider>
